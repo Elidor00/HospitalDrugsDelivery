@@ -131,8 +131,10 @@ dmypy.json
 # Webots
 
 .cache/
+.hospital/
 
 # PyCharm
 
 \.idea/
 *__pycache__/
+
