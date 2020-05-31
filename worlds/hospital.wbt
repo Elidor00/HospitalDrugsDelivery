@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9978865291748493 -0.04170262703299039 0.049833380277881666 1.5483417197874907
-  position 49.88810562410303 2.0434464825321825 12.800169645780798
+  orientation -0.967023103199844 0.14883442370337976 0.20667518525122183 0.5883345331064189
+  position 3.8208111438170187 33.06966188805016 76.0122044302473
 }
 TexturedBackground {
   luminosity 3
@@ -18,24 +18,6 @@ Floor {
   }
 }
 Floor {
-  translation 50 0 12.9
-  rotation 0 1 0 48.69469969389957
-  name "floor(3)"
-  size 1 1
-  tileSize 1 1
-  appearance PBRAppearance {
-    baseColorMap ImageTexture {
-      url [
-        "/usr/local/webots/projects/robots/gctronic/e-puck/worlds/textures/oval_line.png"
-      ]
-    }
-  }
-}
-E-puck {
-  translation 50.42 0 12.92
-  controller "e-puck_line"
-}
-Floor {
   translation -3.4 0 14
   rotation 0 1 0 48.69469969389957
   name "floor(1)"
@@ -44,7 +26,7 @@ Floor {
   appearance PBRAppearance {
     baseColorMap ImageTexture {
       url [
-        "/home/filippo/Project/HDD/worlds/textures/line1.png"
+        ""
       ]
     }
     textureTransform TextureTransform {
@@ -635,4 +617,5 @@ Bed {
 }
 Pioneer3dx {
   translation -5.66826 0.0975 26.3886
+  controller "<extern>"
 }
