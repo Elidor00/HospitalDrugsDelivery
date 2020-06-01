@@ -3,8 +3,8 @@ WorldInfo {
   basicTimeStep 64
 }
 Viewpoint {
-  orientation -0.9901403664791919 -0.13831435013920557 0.022162924311128308 1.0689790759589959
-  position -0.3260350975242087 30.916525576692873 51.06850377195571
+  orientation -0.37583698055545445 0.8137144716143286 0.44341326404650205 1.710988605917006
+  position 14.221363294537383 19.207004324223444 33.947099970813966
 }
 TexturedBackground {
   luminosity 3
@@ -41,7 +41,7 @@ Table {
   size 4.5 0.74 1.5
 }
 Cabinet {
-  translation -10.78 0 31.9
+  translation -10.78 0 24.54
   name "cabinet(1)"
   columnsWidths [
     1.3, 0.17, 0.17
@@ -54,7 +54,7 @@ Cabinet {
   ]
 }
 Cabinet {
-  translation 3.95 0 30.07
+  translation 0.48 0 22.78
   columnsWidths [
     1, 1
   ]
@@ -617,6 +617,6 @@ Bed {
   name "bed(21)"
 }
 Pioneer3dx {
-  translation 1.35174 0.0975 30.8086
+  translation 1.35174 0.0975 33.9986
   controller "<extern>"
 }
