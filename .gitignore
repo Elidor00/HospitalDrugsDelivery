@@ -131,7 +131,7 @@ dmypy.json
 # Webots
 
 .cache/
-.hospital/
+worlds/.hospital.wbproj
 
 # PyCharm
 
