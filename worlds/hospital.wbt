@@ -1,10 +1,9 @@
 #VRML_SIM R2020a utf8
 WorldInfo {
-  basicTimeStep 64
 }
 Viewpoint {
   orientation -0.37583698055545445 0.8137144716143286 0.44341326404650205 1.710988605917006
-  position 14.221363294537383 19.207004324223444 33.947099970813966
+  position 14.34760208660191 19.125160828826928 33.78561044690729
 }
 TexturedBackground {
   luminosity 3
@@ -617,6 +616,6 @@ Bed {
   name "bed(21)"
 }
 Pioneer3dx {
-  translation 1.35174 0.0975 33.9986
+  translation 1.35174 0.0975 35.6586
   controller "<extern>"
 }
