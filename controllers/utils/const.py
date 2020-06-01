@@ -1,3 +1,5 @@
+# Const per avoid obstacles
+
 MAX_SENSOR_NUMBER = 16
 MAX_SPEED = 5.24
 MAX_SENSOR_VALUE = 1024
@@ -17,3 +19,16 @@ WEIGHT_SENSORS = [
     (0, 0),    (0, 0),    (0, 0),    (0, 0),
     (0, 0),    (0, 0),    (0, 0),    (0, 0)
 ]
+
+
+# Const for gps
+
+DISTANCE_TOLERANCE = 0.1
+TURN_COEFFICIENT = 4.0
+
+# coordinate for target points
+TARGET_POINTS = [
+    [1.44, 31.03]
+]
+
+TARGET_POINTS_SIZE = len(TARGET_POINTS)

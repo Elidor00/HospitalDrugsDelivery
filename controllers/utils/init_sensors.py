@@ -22,3 +22,12 @@ def init_gps(robot):
 	gps.enable(TIME_STEP)
 
 	return gps
+
+
+def init_compass(robot):
+
+	name_compass = "compass"
+	compass = robot.getCompass(name_compass)
+	compass.enable(TIME_STEP)
+
+	return compass

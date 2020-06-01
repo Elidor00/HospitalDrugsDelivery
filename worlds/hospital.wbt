@@ -2,11 +2,14 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9404436942881852 0.25167916412569563 0.22852408236022187 0.6629480089782646
-  position 2.3113231184975054 8.693293545141735 44.500542942322134
+  orientation 0.043858287141395606 0.7364501883366203 0.675068567441841 3.1031676312302365
+  position 0.6542078314270616 22.4154140110808 33.7886005603289
 }
 TexturedBackground {
   luminosity 3
+}
+SoccerBall {
+  translation 1.44 0.31 31.13
 }
 Floor {
   translation 15.4 0 12.9
@@ -616,9 +619,17 @@ Bed {
   name "bed(21)"
 }
 Pioneer3dx {
-  translation 1.35174 0.0975 35.6586
+  translation 1.44 0.0975 36.2
+  rotation 0 -1 0 5.92017e-06
   controller "<extern>"
   extensionSlot [
+    Compass {
+      children [
+        Shape {
+        }
+      ]
+      yAxis FALSE
+    }
     GPS {
       children [
         Shape {
