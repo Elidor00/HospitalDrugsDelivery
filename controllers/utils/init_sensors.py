@@ -13,3 +13,12 @@ def init_distance_sensors(robot) -> list:
 		# time step for frequency of upgrading value
 
 	return distance_sensors
+
+
+def init_gps(robot):
+
+	name_gps = "gps"
+	gps = robot.getGPS(name_gps)
+	gps.enable(TIME_STEP)
+
+	return gps

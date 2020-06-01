@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.37583698055545445 0.8137144716143286 0.44341326404650205 1.710988605917006
-  position 14.34760208660191 19.125160828826928 33.78561044690729
+  orientation -0.9404436942881852 0.25167916412569563 0.22852408236022187 0.6629480089782646
+  position 2.3113231184975054 8.693293545141735 44.500542942322134
 }
 TexturedBackground {
   luminosity 3
@@ -618,4 +618,18 @@ Bed {
 Pioneer3dx {
   translation 1.35174 0.0975 35.6586
   controller "<extern>"
+  extensionSlot [
+    GPS {
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.08
+            radius 0.05
+          }
+        }
+      ]
+    }
+  ]
 }

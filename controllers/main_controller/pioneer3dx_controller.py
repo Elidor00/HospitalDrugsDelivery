@@ -1,14 +1,10 @@
 from controller import Robot
-from controllers.utils.const import *
 from controllers.obstacle_avoidance.pioneer3dx import avoid_obstacles
-from controllers.utils.init_sensors import init_distance_sensors
+from controllers.utils.init_sensors import *
 
 if __name__ == '__main__':
 	# create the Robot instance.
 	robot = Robot()
-
-	# get the time step of the current world.
-	TIME_STEP = int(robot.getBasicTimeStep())
 
 	leftMotor = robot.getMotor('left wheel')
 	rightMotor = robot.getMotor('right wheel')
@@ -23,8 +19,11 @@ if __name__ == '__main__':
 
 	state = FORWARD
 
+	gps = init_gps(robot)
+
 	while robot.step(TIME_STEP) != -1:
 		state = avoid_obstacles(distance_sensors, leftMotor, rightMotor, state)
+		print(gps.getValues())  # [x,y,z]
 
 	# Enter here exit cleanup code.
 
