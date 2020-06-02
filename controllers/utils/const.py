@@ -28,7 +28,7 @@ TURN_COEFFICIENT = 4.0
 
 # coordinate for target points
 TARGET_POINTS = [
-    [1.44, 31.03]
+    [1.44, 31.03], [-5.19, 31.03]
 ]
 
 TARGET_POINTS_SIZE = len(TARGET_POINTS)
