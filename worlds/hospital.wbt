@@ -1,15 +1,16 @@
 #VRML_SIM R2020a utf8
 WorldInfo {
+  basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.9864766848620263 0.15905189773497821 -0.03957580132515919 5.382252469551794
-  position 1.2017670860267489 11.086802571677337 43.81331236967853
+  orientation -0.7917449072871667 0.4794888616281016 0.3784579677578779 1.2849704465894007
+  position 6.822499380378446 17.759690734313082 41.04177180761964
 }
 TexturedBackground {
   luminosity 3
 }
 SoccerBall {
-  translation 1.44 0.31 31.13
+  translation -5.19 0.31 31.03
 }
 Floor {
   translation 15.4 0 12.9
@@ -620,15 +621,9 @@ Bed {
 }
 Pioneer3dx {
   translation 1.44 0.0975 36.2
-  rotation 0 -1 0 0
   controller "<extern>"
   extensionSlot [
     Compass {
-      children [
-        Shape {
-        }
-      ]
-      yAxis FALSE
     }
     GPS {
       children [
