@@ -37,9 +37,7 @@ def step(checkpoint_coord):
         pos = [pos3d[0], pos3d[2]]
         north = compass.getValues()  # [x, NaN, z]  u = 0, v = 2
         #print("NORTH " + north)
-        #front = [-north[0], north[2]]
-
-
+        front = [-north[0], north[2]]
         # print("compass: " + str(north3D))
 
         # compute the 2D position of the robot and its orientation
@@ -47,11 +45,20 @@ def step(checkpoint_coord):
         direction = minus(checkpoint_coord, pos)
         #print("DIRECTION " + str(direction))
         distance = norm(direction)
-        #direction = normalize(direction)
+        direction = normalize(direction)
         #print("FRONT " + str(front))
         #print("DIRECTION " + str(direction))
-        #beta = angle(front, direction) - pi
-        #print(beta)
+        beta = angle(front, direction) - pi
+        print("beta in gradi " + str(beta / pi * 180))
+
+        beta_nord = atan2(north[0], north[2])
+        beta_nord_degree = beta_nord / pi * 180
+        print("beta nord in gradi " + str(beta_nord_degree))
+
+        beta_direction = atan2(direction[0], direction[1])
+        beta_direction_degree = beta_direction / pi * 180
+        print("beta direction in gradi " + str(beta_direction_degree) + "\n")
+
         #leftMotor.setVelocity(MAX_SPEED - pi + TURN_COEFFICIENT * beta)
         #rightMotor.setVelocity(MAX_SPEED - pi - TURN_COEFFICIENT * beta)
         #speed_vector = [MAX_SPEED, MAX_SPEED]
