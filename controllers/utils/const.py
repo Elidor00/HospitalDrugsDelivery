@@ -23,12 +23,12 @@ WEIGHT_SENSORS = [
 
 # Const for gps
 
-DISTANCE_TOLERANCE = 0.01
+DISTANCE_TOLERANCE = 0.2
 TURN_COEFFICIENT = 4.0
 
 # coordinate for target points
 TARGET_POINTS = [
-    [1.44, 31.03], [-5.19, 31.03]
+    [1.44, 31.03], [-5.19, 31.03], [-5.19, 26.99]
 ]
 
 TARGET_POINTS_SIZE = len(TARGET_POINTS)
