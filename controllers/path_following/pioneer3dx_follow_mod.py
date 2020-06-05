@@ -2,44 +2,54 @@ from controllers.utils.const import *
 from controllers.utils.coordinate_utils import *
 
 
-def run_forward(checkpoint_coord, current_position):
-    # TODO add check in proximity of checkpoint_coord for reduce velocity
-    # comment avoid_obstacles for testing gps
-    # state = avoid_obstacles(distance_sensors, leftMotor, rightMotor, state)
+def move_to(robot, gps, compass, left_motor, right_motor, checkpoint_coord):
+    while robot.step(TIME_STEP) != -1:
 
-    # compute the direction and the distance from the target
-    direction = minus(checkpoint_coord, current_position)
-    print("DIRECTION " + str(direction))
-    distance = norm(direction)
-    # direction = normalize(direction)
-    speed_vector = [MAX_SPEED, MAX_SPEED]
+        # print("velocita sx: " + str(left_motor.getVelocity()))
+        # print("velocita dx: " + str(right_motor.getVelocity()))
+
+        # read gps position and compass values
+        pos3d = gps.getValues()  # [x,y,z]
+        pos = [pos3d[0], pos3d[2]]  # robot's coordinate x and z
+        north3d = compass.getValues()  # [x, NaN, z]  u = 0, v = 2
+        north = [north3d[0], north3d[2]]
+
+        # compute the 2D position of the robot and its orientation
+        direction = minus(checkpoint_coord, pos)
+        distance = norm(direction)
+
+        new_checkpoint_coord = minus(checkpoint_coord, pos)
+        # print("New checkpoint Coord: " + str(new_checkpoint_coord))
+
+        # calculate angle between robot position and checkpoint
+        checkpoint_angle = polar_angle(new_checkpoint_coord)
+        # print("Checkpoint Angle: " + str(checkpoint_angle))
+
+        # calculate angle between front of robot and north
+        north_angle = polar_angle(north)
+        # print("North Angle: " + str(north_angle))
+
+        if checkpoint_angle < 0 and north_angle < 0:
+            # angle between robot and checkpoint
+            angle = checkpoint_angle + north_angle + 360.0
+        else:
+            angle = checkpoint_angle + north_angle
+
+        print("Angle Value " + str(angle))
+
+        left_motor.setVelocity(MAX_SPEED - pi + TURN_COEFFICIENT * angle)
+        right_motor.setVelocity(MAX_SPEED - pi - TURN_COEFFICIENT * angle)
+
+        if check_arrived(left_motor, right_motor, distance):
+            return
+
+
+def check_arrived(left_motor, right_motor, distance):
+    res = False
     # a target position has been reached
-    if distance < DISTANCE_TOLERANCE:
-        # print("Checkpoint " + str(checkpoint_coord) + " raggiunto!")
-        # current_target_index += 1
-        # current_target_index %= TARGET_POINTS_SIZE
-        speed_vector = [0.0, 0.0]
-    return speed_vector
-
-
-
-def turn(checkpoint_coord, current_position, counter):
-    #if abs(checkpoint_coord[0]) > abs(current_position[0]):
-    beta = -1.5708
-    # direction = minus(checkpoint_coord, current_position)
-    # print("DIRECTION " + str(direction))
-    # distance = norm(direction)
-    # direction = normalize(direction)
-    speed_vector = [MAX_SPEED - pi + TURN_COEFFICIENT * beta,  MAX_SPEED - pi - TURN_COEFFICIENT * beta]
-    # a target position has been reached
-    # if distance < DISTANCE_TOLERANCE:
-    print("COUNTER " + str(counter))
-    if counter > 13:
-        # print("Checkpoint " + str(checkpoint_coord) + " raggiunto!")
-        # current_target_index += 1
-        # current_target_index %= TARGET_POINTS_SIZE
-        speed_vector = [0.0, 0.0]
-    return [counter+1, speed_vector]
-
-
-
+    if distance <= DISTANCE_TOLERANCE:
+        left_motor.setVelocity(0.0)
+        right_motor.setVelocity(0.0)
+        print("FINE CHECKPOINT")
+        res = True
+    return res
