@@ -3,14 +3,14 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.0016316430703733455 -0.8769702120964058 -0.4805419699011483 3.325060865573053
-  position -2.641012857991884 29.49976735114925 15.639157636849305
+  orientation 0.006772005789172019 -0.7527103950256195 -0.658316945823186 3.29507374993332
+  position -3.186000385488197 67.16158747493593 -6.782041635941358
 }
 TexturedBackground {
   luminosity 3
 }
 SoccerBall {
-  translation -5.19 0.31 37.25
+  translation -3.67 0.31 -3.1
 }
 Floor {
   translation 15.4 0 12.9
@@ -620,7 +620,7 @@ Bed {
   name "bed(21)"
 }
 Pioneer3dx {
-  translation 1.44 0.0969315 36.89
+  translation -10.26 0.0969315 -3.5
   rotation 0 1 0 3.14159
   controller "<extern>"
   extensionSlot [
