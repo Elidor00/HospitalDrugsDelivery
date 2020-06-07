@@ -19,17 +19,23 @@ def move_to(robot, gps, compass, left_motor, right_motor, checkpoint_coord):
         distance = norm(direction)
 
         new_checkpoint_coord = minus(checkpoint_coord, pos)
-        # print("New checkpoint Coord: " + str(new_checkpoint_coord))
 
-        # calculate angle between robot position and checkpoint
-        checkpoint_angle = polar_angle(new_checkpoint_coord)
-        print("Checkpoint Angle: " + str(checkpoint_angle))
+        # print("New checkpoint Coord: " + str(new_checkpoint_coord))
 
         # calculate angle between front of robot and north
         north_angle = polar_angle(north)
         print("North Angle: " + str(north_angle))
 
-        angle = checkpoint_angle + north_angle
+        new_checkpoint_coord = rotate(north_angle, new_checkpoint_coord)
+
+        # calculate angle between robot position and checkpoint
+        checkpoint_angle = polar_angle(new_checkpoint_coord)
+        print("Checkpoint Angle: " + str(checkpoint_angle))
+
+        #angle = checkpoint_angle + north_angle
+        angle = checkpoint_angle
+
+
         '''
         if checkpoint_angle < 0 and north_angle < 0:
             # angle between robot and checkpoint
