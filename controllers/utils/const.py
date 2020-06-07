@@ -1,3 +1,4 @@
+from controllers.hospital_map.graph import *
 # Const per avoid obstacles
 
 MAX_SENSOR_NUMBER = 16
@@ -25,11 +26,30 @@ WEIGHT_SENSORS = [
 DISTANCE_TOLERANCE = 0.2
 TURN_COEFFICIENT = 4.0
 
+'''
 # coordinate for target points
 TARGET_POINTS = [
     [-10.26, -3.5], [-10.26, -9.56], [-3.67, -9.56], [-3.67, -3.1],
     [1.41, -3.1], [1.41, -7.39], [3.98, -7.39], [-1.18, -7.39],
     [-1.14, -3.1], [-1.14, -4.03], [3.7, -3.1], [3.7, -4.22]
 ]
+'''
+
+TARGET_POINTS = [
+    MAP_POINTS["Warehouse"],
+    MAP_POINTS["ExitWareHouse"],
+    MAP_POINTS["Hallway0"],
+    MAP_POINTS["EntryR1"],
+    MAP_POINTS["NearR1B0"],
+    MAP_POINTS["R1Bed0"],
+    MAP_POINTS["NearR1B0"],
+    MAP_POINTS["BetweenR1B0B3"],
+    MAP_POINTS["EntryR1"],
+    MAP_POINTS["Hallway0"],
+    MAP_POINTS["ExitWareHouse"]
+]
+
+
+
 
 TARGET_POINTS_SIZE = len(TARGET_POINTS)

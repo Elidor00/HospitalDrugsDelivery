@@ -3,14 +3,16 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.007930717847090565 -0.7333919739988392 -0.6797597488734649 3.2579473084135344
-  position -2.5314585615816814 30.80632408587696 -8.364367925030065
+  orientation 0.12902668485067753 0.7328651062192126 0.6680275822769193 3.422823857433493
+  position -5.443402952876055 66.30311355467603 -17.22473968571884
+  follow "soccer ball"
+  followType "None"
 }
 TexturedBackground {
   luminosity 3
 }
 SoccerBall {
-  translation -3.67 0.31 -3.1
+  translation -3.42 0.31 15.78
 }
 Floor {
   translation 15.4 0 12.9
@@ -57,7 +59,7 @@ Cabinet {
   ]
 }
 Cabinet {
-  translation 0.48 0 22.78
+  translation 0.48 0 22.55
   columnsWidths [
     1, 1
   ]
@@ -109,7 +111,7 @@ Wall {
   }
 }
 Wall {
-  translation 5.42051 0 -4.06
+  translation 5.42239 0 -3.96
   rotation 0 1 0 1.57085
   name "wall(25)"
   size 14 3 0.2
@@ -120,7 +122,7 @@ Wall {
   }
 }
 Wall {
-  translation -7.89886 0 36.2198
+  translation -7.89886 0 36.2598
   rotation 0 -1 0 4.7123353
   name "wall(4)"
   size 5.5 3 0.2
@@ -131,7 +133,7 @@ Wall {
   }
 }
 Wall {
-  translation -7.89937 0 28.8298
+  translation -7.89937 0 29.0398
   rotation 0 -1 0 4.7123353
   name "wall(9)"
   size 5.5 3 0.2
@@ -142,7 +144,7 @@ Wall {
   }
 }
 Wall {
-  translation -2.66948 0 27.2698
+  translation -2.64055 0 27.2698
   rotation 0 -1 0 4.7123353
   name "wall(12)"
   size 5.5 3 0.2
@@ -153,7 +155,7 @@ Wall {
   }
 }
 Wall {
-  translation -2.66986 0 19.9898
+  translation -2.64055 0 19.7598
   rotation 0 -1 0 4.7123353
   name "wall(18)"
   size 5.5 3 0.2
@@ -164,40 +166,7 @@ Wall {
   }
 }
 Wall {
-  translation -2.70055 0 1.8198
-  rotation 0 -1 0 -1.570845307179586
-  name "wall(31)"
-  size 8 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -7.89972 0 21.4898
-  rotation 0 -1 0 4.7123353
-  name "wall(11)"
-  size 5.5 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -7.90015 0 14.3998
-  rotation 0 -1 0 4.7123353
-  name "wall(14)"
-  size 5.5 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation 8.05954 0 7.32958
+  translation 8.07954 0 7.32958
   rotation 0 1 0 5.3666e-05
   name "wall(28)"
   size 5.5 3 0.2
@@ -208,10 +177,32 @@ Wall {
   }
 }
 Wall {
-  translation -7.90056 0 7.2498
+  translation -7.90056 0 7.4498
   rotation 0 -1 0 4.7123353
   name "wall(16)"
-  size 5.5 3 0.2
+  size 5 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -7.90021 0 14.7198
+  rotation 0 -1 0 4.7123353
+  name "wall(14)"
+  size 5 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -7.89985 0 21.9898
+  rotation 0 -1 0 4.7123353
+  name "wall(11)"
+  size 5 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -230,7 +221,7 @@ Wall {
   }
 }
 Wall {
-  translation -2.51885 0 35.4197
+  translation -2.64055 0 35.4197
   rotation 0 -1 0 4.7123353
   name "wall(6)"
   size 7 3 0.2
@@ -241,9 +232,20 @@ Wall {
   }
 }
 Wall {
-  translation -2.52117 0 -7.2703
+  translation -2.64055 0 -7.4603
   rotation 0 -1 0 4.7123353
   name "wall(20)"
+  size 7 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -2.6401 0 1.2297
+  rotation 0 -1 0 4.7123353
+  name "wall(31)"
   size 7 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
@@ -285,7 +287,7 @@ Wall {
   }
 }
 Wall {
-  translation 5.3912 0 5.2092
+  translation 5.42239 0 5.2092
   rotation 0 1 0 1.57085
   name "wall(26)"
   size 4.4 3 0.2
@@ -296,10 +298,10 @@ Wall {
   }
 }
 Wall {
-  translation 12.9712 0 5.72898
+  translation 12.9712 0 5.39898
   rotation 0 1 0 1.57085
   name "wall(29)"
-  size 4.4 3 0.2
+  size 4 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -329,10 +331,10 @@ Wall {
   }
 }
 Wall {
-  translation 1.29112 0 29.9693
+  translation 1.3108 0 22.4193
   rotation 0 1 0 5.53072e-05
-  name "wall(7)"
-  size 7.7 3 0.2
+  name "wall(8)"
+  size 8.1 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -340,10 +342,10 @@ Wall {
   }
 }
 Wall {
-  translation 1.2908 0 22.6593
+  translation 1.31121 0 29.9893
   rotation 0 1 0 5.53072e-05
-  name "wall(8)"
-  size 7.7 3 0.2
+  name "wall(7)"
+  size 8.1 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -362,10 +364,10 @@ Wall {
   }
 }
 Wall {
-  translation 0.230029 0 7.3293
+  translation 0.520029 0 7.3293
   rotation 0 1 0 5.53072e-05
   name "wall(22)"
-  size 5.7 3 0.2
+  size 6.5 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -373,7 +375,7 @@ Wall {
   }
 }
 Wall {
-  translation 5.48043 0 18.7093
+  translation 5.42239 0 18.7693
   rotation 0 1 0 -1.5707453071795863
   name "wall(21)"
   size 7.7 3 0.2
@@ -384,10 +386,10 @@ Wall {
   }
 }
 Wall {
-  translation 14.9104 0 18.4193
+  translation 14.9104 0 18.7093
   rotation 0 1 0 -1.5707453071795863
   name "wall(30)"
-  size 7.7 3 0.2
+  size 7.3 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -450,10 +452,10 @@ Wall {
   }
 }
 Wall {
-  translation 1.28934 0 -2.1707
+  translation 1.33934 0 -2.17068
   rotation 0 1 0 5.53072e-05
   name "wall(19)"
-  size 7.7 3 0.2
+  size 8.1 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -620,7 +622,7 @@ Bed {
   name "bed(21)"
 }
 Pioneer3dx {
-  translation -10.26 0.0969315 -3.5
+  translation -10.26 0.0969315 0.22
   rotation 0 1 0 3.14159
   controller "<extern>"
   extensionSlot [
