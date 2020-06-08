@@ -1,12 +1,10 @@
-from controllers.utils.const import *
+from controllers.utils.const import TIME_STEP, TURN_COEFFICIENT, DISTANCE_TOLERANCE, MAX_SPEED
 from controllers.utils.coordinate_utils import *
+from math import pi
 
 
 def move_to(robot, gps, compass, left_motor, right_motor, checkpoint_coord):
     while robot.step(TIME_STEP) != -1:
-
-        # print("velocita sx: " + str(left_motor.getVelocity()))
-        # print("velocita dx: " + str(right_motor.getVelocity()))
 
         # read gps position and compass values
         pos3d = gps.getValues()  # [x,y,z]
@@ -23,13 +21,13 @@ def move_to(robot, gps, compass, left_motor, right_motor, checkpoint_coord):
 
         # calculate angle between front of robot and north
         north_angle = polar_angle(north)
-        print("North Angle: " + str(north_angle))
+        # print("North Angle: " + str(north_angle))
 
         new_checkpoint_coord = rotate(north_angle, new_checkpoint_coord)
 
         # calculate angle between robot orientation and checkpoint
         angle = polar_angle(new_checkpoint_coord)
-        print("Angle Value " + str(angle))
+        # print("Angle Value " + str(angle))
 
         left_motor.setVelocity(MAX_SPEED - pi + TURN_COEFFICIENT * angle)
         right_motor.setVelocity(MAX_SPEED - pi - TURN_COEFFICIENT * angle)
@@ -44,6 +42,6 @@ def check_arrived(left_motor, right_motor, distance):
     if distance <= DISTANCE_TOLERANCE:
         left_motor.setVelocity(0.0)
         right_motor.setVelocity(0.0)
-        print("FINE CHECKPOINT")
+        print("Checkpoint reached")
         res = True
     return res

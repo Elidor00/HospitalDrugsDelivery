@@ -14,6 +14,11 @@ def minus(vector1: list, vector2: list) -> list:
     return vector_res
 
 
+# distance between two points
+def calculate_distance(vector1: list, vector2: list) -> float:
+    return norm(minus(vector1, vector2))
+
+
 # arctangent(z, x)
 def polar_angle(vector1: list) -> float:
     return degrees(atan2(vector1[1], vector1[0]))

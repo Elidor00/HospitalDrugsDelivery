@@ -20,9 +20,9 @@ MAP_POINTS = {
     "BetweenR1B0B3": [1.33, 5.78],
     "NearR1B3": [3.74, 5.78],
     "R1Bed3": [3.74, 4.63],
-    "BetweenR1B1B2": [1.33, -0.8],
-    "R1Bed2": [3.74, -0.8],
-    "R1Bed1": [-1.09, -0.8],
+    "BetweenR1B1B2": [1.33, 0.8],
+    "R1Bed2": [3.74, 0.8],
+    "R1Bed1": [-1.09, 0.8],
 
     "EntryR4": [-3.67, 31.06],
     "NearR4B0": [-1.09, 31.06],
@@ -63,11 +63,15 @@ EDGES = [
     ("BetweenR1B1B2", "R1Bed2"),
     ("BetweenR1B1B2", "R1Bed1"),
 
+    ("EntryR1", "EntryR2"),
+
+    ("EntryR2", "EntryR3"),
+
     ("EntryR3", "EntryR4"),
-    ("EntryR4", "NearR4B0"),
-    ("NearR4B0", "BetweenR4B0B3"),
+    ("EntryR4", "NearR4B3"),
+    ("NearR4B3", "BetweenR4B0B3"),
     ("NearR4B0", "R4Bed0"),
-    ("BetweenR4B0B3", "NearR4B3"),
+    ("BetweenR4B0B3", "NearR4B0"),
     ("NearR4B3", "R4Bed3"),
     ("BetweenR4B0B3", "BetweenR4B1B2"),
     ("BetweenR4B1B2", "R4Bed2"),
