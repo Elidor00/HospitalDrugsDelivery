@@ -39,7 +39,7 @@ MAP_POINTS = {
 
 }
 
-Edges = [
+EDGES = [
     ("Warehouse", "ExitWareHouse"),
     ("ExitWareHouse", "Hallway0"),
     ("Hallway0", "EntryR0"),

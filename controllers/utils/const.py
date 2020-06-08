@@ -49,7 +49,4 @@ TARGET_POINTS = [
     MAP_POINTS["ExitWareHouse"]
 ]
 
-
-
-
 TARGET_POINTS_SIZE = len(TARGET_POINTS)

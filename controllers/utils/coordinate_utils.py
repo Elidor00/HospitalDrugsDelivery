@@ -1,8 +1,6 @@
-from math import sqrt, atan2, pi, cos, sin, radians
+from math import sqrt, atan2, cos, sin, radians, degrees
 
 
-# u = vector[0], v = vector[1]
-# vector = [u,v]
 # ||v||
 def norm(vector: list) -> float:
     return sqrt(vector[0] * vector[0] + vector[1] * vector[1])
@@ -17,13 +15,11 @@ def minus(vector1: list, vector2: list) -> list:
 
 
 # arctangent(z, x)
-def polar_angle(vector1: list):
-    angle_degree = atan2(vector1[1], vector1[0]) / pi * 180
-    if angle_degree < 0:
-        angle_degree = angle_degree
-    return angle_degree
+def polar_angle(vector1: list) -> float:
+    return degrees(atan2(vector1[1], vector1[0]))
 
 
-def rotate(angle, vector):
+# rotate the vector "vector" (coord system) of angle "angle"
+def rotate(angle: float, vector: list) -> list:
     return [vector[0] * cos(radians(angle)) - vector[1] * sin(radians(angle)),
             vector[0] * sin(radians(angle)) + vector[1] * cos(radians(angle))]
