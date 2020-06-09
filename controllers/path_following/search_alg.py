@@ -16,7 +16,7 @@ def astar(start: str, end: str):
 
 	optimal_path = []
 
-	while open_list is not []:
+	while open_list:
 		f_score_value = [(x, f_score[x]) for x in open_list]
 		min_f_score_value = min(map(lambda x: x[1], f_score_value))
 		list_node_name = [x[0] for x in f_score_value if x[1] == min_f_score_value]  # list with a single value

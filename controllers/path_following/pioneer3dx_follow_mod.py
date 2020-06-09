@@ -1,11 +1,12 @@
-from controllers.utils.const import TIME_STEP, TURN_COEFFICIENT, DISTANCE_TOLERANCE, MAX_SPEED
+from controllers.utils.const import TIME_STEP, TURN_COEFFICIENT, DISTANCE_TOLERANCE, MAX_SPEED, DISTANCE_BRAKE, \
+    MIN_SPEED
 from controllers.utils.coordinate_utils import *
 from math import pi
 
 
-def move_to(robot, gps, compass, left_motor, right_motor, checkpoint_coord):
+def move_to(robot, gps, compass, left_motor, right_motor, checkpoint_coord, keyboard, check_keyboard):
     while robot.step(TIME_STEP) != -1:
-
+        check_keyboard(robot, keyboard, gps)
         # read gps position and compass values
         pos3d = gps.getValues()  # [x,y,z]
         pos = [pos3d[0], pos3d[2]]  # robot's coordinate x and z
@@ -44,4 +45,7 @@ def check_arrived(left_motor, right_motor, distance):
         right_motor.setVelocity(0.0)
         print("Checkpoint reached")
         res = True
+    elif distance <= DISTANCE_BRAKE:
+        left_motor.setVelocity(MIN_SPEED)
+        right_motor.setVelocity(MIN_SPEED)
     return res

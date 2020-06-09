@@ -1,8 +1,10 @@
 # Const per avoid obstacles
 MAX_SENSOR_NUMBER = 16
 MAX_SPEED = 12.00
+MIN_SPEED = MAX_SPEED/2
 MAX_SENSOR_VALUE = 1024
 MIN_DISTANCE = 1.0
+NAME_SENSOR = "so"
 WHEEL_WEIGHT_THRESHOLD = 100
 SPEED_CHANGE_FACTOR = 0.7
 TIME_STEP = 16
@@ -20,5 +22,16 @@ WEIGHT_SENSORS = [
 ]
 
 # Const for robot path: turn coefficient and checkpoint distance tolerance
+DISTANCE_BRAKE = 0.8
 DISTANCE_TOLERANCE = 0.2
-TURN_COEFFICIENT = 4.0
+TURN_COEFFICIENT = 4.0  # TODO reduce it for fix the warning in webots console
+
+# Const for motor
+LEFT_WHEEL = "left wheel"
+RIGHT_WHEEL = "right wheel"
+
+# Const for gps
+GPS = "gps"
+
+# Const for compass
+COMPASS = "compass"
