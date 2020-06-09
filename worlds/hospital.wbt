@@ -3,8 +3,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.0024395737892659156 0.8143706849516466 0.5803399313946206 3.1347459435522618
-  position -4.639527241120643 62.106443861694345 -23.075316445040247
+  orientation -0.0027414154990089614 0.8707086938438169 0.4917914752269053 3.131885467983576
+  position -5.538802171702363 29.776199377772027 -15.407415794632374
   follow "soccer ball"
   followType "None"
 }
@@ -17,11 +17,55 @@ SoccerBall {
 Floor {
   translation 15.4 0 12.9
   rotation 0 1 0 48.69469969389957
-  name "floor(2)"
+  name "floor(3)"
   size 19.4 20
   tileSize 1 1
   appearance ThreadMetalPlate {
   }
+}
+WoodenPallet {
+  translation 24.52 0 18.61
+  size 1.1 0.11 1.4
+  lathWidth 0.1
+}
+WoodenPallet {
+  translation 23.3103 0 19.9913
+  rotation 0 1 0 -1.3089953071795861
+  name "wooden pallet(1)"
+  size 1.1 0.11 1.4
+  lathWidth 0.1
+}
+CardboardBox {
+  translation 20.39 0.3 21.32
+  rotation 0 1 0 0.261799
+}
+CardboardBox {
+  translation 20.1933 0.3 18.4225
+  rotation 0 1 0 0.261799
+  name "cardboard box(2)"
+}
+CardboardBox {
+  translation 20.5059 0.9 21.2887
+  rotation 0 1 0 0.261799
+  name "cardboard box(1)"
+}
+WoodenPalletStack {
+  translation 21.9804 0 21.8814
+  rotation 0 1 0 1.5708
+  name "wooden pallet stack(2)"
+  palletNumber 10
+}
+WoodenPalletStack {
+  translation 20.1654 0 16.1358
+  rotation 0 1 0 1.309
+}
+WoodenPalletStack {
+  translation 20.0544 1.13 16.069
+  rotation 0 1 0 2.0944
+  name "wooden pallet stack(1)"
+}
+FireExtinguisher {
+  translation -8.31 0 24.02
 }
 Floor {
   translation -3.4 0 14
@@ -40,10 +84,50 @@ Floor {
     }
   }
 }
-Table {
-  translation -10.0989 0 21.0803
+MyBed {
+  translation -5.44 6.28816e-06 0.619989
+  rotation 1 1.19872e-08 7.07571e-07 -1.5707953071795862
+}
+Pedestrian {
+  translation -9.66 1.27 21.88
   rotation 0 1 0 1.5708
-  size 4.5 0.74 1.5
+}
+Panel {
+  translation -7.72 0 -4.05
+  rotation 0 1 0 -1.5707953071795862
+  size 1.9 1.5 0.05
+  borderHeight 0.1
+  panelsCount 4
+  appearance VarnishedPine {
+    textureTransform TextureTransform {
+      scale 3 3
+    }
+  }
+}
+Cabinet {
+  translation -8.96 0 2.85
+  rotation 0 1 0 3.14159
+  name "cabinet(2)"
+  rowsHeights [
+    0.35, 0.2, 0.2, 0.4, 0.4
+  ]
+  columnsWidths [
+    1.4, 0.17, 0.17
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.933333 0.933333 0.92549
+  }
+  secondaryAppearance PaintedWood {
+    colorOverride 0.203922 0.396078 0.643137
+  }
+}
+WoodenChair {
+  translation -11.34 0 22.66
+  rotation 0 1 0 1.5708
+}
+Desk {
+  translation -10.72 0 22.65
+  rotation 0 1 0 -1.5707953071795862
 }
 Cabinet {
   translation -10.78 0 24.54
@@ -67,6 +151,33 @@ Cabinet {
     "RightSidedDoor (1, 1, 1, 5, 1.5)"
     "LeftSidedDoor (2, 1, 1, 5, 1.5)"
   ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.8 1 1
+  }
+  secondaryAppearance PaintedWood {
+    colorOverride 0.9 1 1
+  }
+}
+Cabinet {
+  translation -8 0 21.78
+  rotation 0 -0.9999999999999999 0 1.5707953071795862
+  name "cabinet(3)"
+  rowsHeights [
+    0.6, 0.2, 0.2, 0.4, 0.4
+  ]
+  columnsWidths [
+    1.5, 1.5
+  ]
+  layout [
+    "RightSidedDoor (1, 1, 1, 5, 1.5)"
+    "LeftSidedDoor (2, 1, 1, 5, 1.5)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.8 1 1
+  }
+  secondaryAppearance PaintedWood {
+    colorOverride 0.9 1 1
+  }
 }
 Wall {
   translation -3.41 0 39.09
@@ -642,4 +753,9 @@ Pioneer3dx {
       ]
     }
   ]
+}
+MyBed1 {
+  translation -5.41 7.78582e-06 2.32
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
 }
