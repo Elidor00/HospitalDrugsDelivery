@@ -36,3 +36,8 @@ def init_motor(robot, string):
     motor.setPosition(float('inf'))
     motor.setVelocity(0.0)
     return motor
+
+
+def set_velocity(left_motor, right_motor, left_speed=MAX_SPEED, right_speed=MAX_SPEED):  # TODO: mettimi nel file giusto
+    left_motor.setVelocity(left_speed)
+    right_motor.setVelocity(right_speed)

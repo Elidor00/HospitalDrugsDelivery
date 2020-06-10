@@ -6,7 +6,13 @@ from math import pi
 
 def move_to(robot, gps, compass, left_motor, right_motor, checkpoint_coord, keyboard, check_keyboard):
     while robot.step(TIME_STEP) != -1:
-        check_keyboard(robot, keyboard, gps)
+
+        # check if enable manual controller for robot
+        manual_control = check_keyboard(keyboard, gps)
+        print(manual_control)
+        if manual_control:
+            return
+
         # read gps position and compass values
         pos3d = gps.getValues()  # [x,y,z]
         pos = [pos3d[0], pos3d[2]]  # robot's coordinate x and z
