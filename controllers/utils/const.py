@@ -1,7 +1,7 @@
 # Const per avoid obstacles
 MAX_SENSOR_NUMBER = 16
 MAX_SPEED = 12.00
-MIN_SPEED = MAX_SPEED/2
+MIN_SPEED = MAX_SPEED / 2
 MAX_SENSOR_VALUE = 1024
 MIN_DISTANCE = 1.0
 NAME_SENSOR = "so"
@@ -35,3 +35,7 @@ GPS = "gps"
 
 # Const for compass
 COMPASS = "compass"
+
+# Const for controller mode
+AUTOMATIC = 0
+MANUAL = 1
