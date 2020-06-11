@@ -2,7 +2,7 @@ from math import pi
 
 from controller import Robot
 from controllers.hospital_map.graph import MAP_POINTS
-from controllers.path_following.search_alg import astar
+from controllers.path_following.astar_alg import astar
 from controllers.utils.const import *
 from controllers.utils.coordinate_utils import minus, norm, polar_angle, rotate
 from controllers.utils.init_sensors import init_gps, init_compass, init_motor, init_keyboard
