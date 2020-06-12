@@ -3,8 +3,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.0025503807152335314 0.8172619669635637 0.5762606813873856 3.1488266021749953
-  position -2.167506504557359 66.83612136702999 -8.916161473898175
+  orientation -0.13474094477434684 0.8904402730520511 0.43469644342725544 2.6029904418652854
+  position -1.1509140090996117 11.017942729841353 -12.492686304441607
   follow "soccer ball"
   followType "None"
 }
@@ -15,7 +15,7 @@ TexturedBackground {
   ]
 }
 SoccerBall {
-  translation -3.42 0.31 15.78
+  translation -9.86 0.31 -3.61
 }
 Floor {
   translation 15.4 0 12.9
@@ -746,7 +746,7 @@ Bed {
 Pioneer3dx {
   translation -10.26 0.0969315 0.22
   rotation 0 1 0 3.14159
-  controller "<extern>"
+  controller ""
   extensionSlot [
     Compass {
       rotation 0 1 0 1.5708
@@ -765,8 +765,35 @@ Pioneer3dx {
     }
   ]
 }
-MyBed1 {
-  translation -5.41 7.78582e-06 2.32
-  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
-  scale 0.1 0.1 0.1
+Pioneer3dx {
+  translation -5.42201 0.0969315 -4.06103
+  rotation -9.59013e-09 -1 7.28428e-08 -0.261795307179586
+  name "Pioneer 3-DX_versioneProva"
+  controller "<extern>"
+  extensionSlot [
+    GPS {
+      translation 0 0 0.15
+      name "gps_back"
+    }
+    Kinect {
+      translation 0 0.15 0
+      width 150
+      height 100
+    }
+    Compass {
+      rotation 0 1 0 1.5708
+    }
+    GPS {
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.08
+            radius 0.05
+          }
+        }
+      ]
+    }
+  ]
 }

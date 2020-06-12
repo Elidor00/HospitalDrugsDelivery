@@ -25,10 +25,24 @@ def init_gps(robot):
     return gps
 
 
+def init_gps_back(robot):
+    gps_back = robot.getGPS("gps_back")
+    gps_back.enable(TIME_STEP)
+    return gps_back
+
+
 def init_compass(robot):
     compass = robot.getCompass(COMPASS)
     compass.enable(TIME_STEP)
     return compass
+
+
+def init_kinect_range(robot):
+    kinect = robot.getRangeFinder("kinect range")
+    kinect.enable(TIME_STEP)
+    camera = robot.getCamera("kinect color")
+    camera.enable(TIME_STEP)
+    return kinect, camera
 
 
 def init_motor(robot, string):
