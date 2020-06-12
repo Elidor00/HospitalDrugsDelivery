@@ -3,13 +3,16 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.0027414154990089614 0.8707086938438169 0.4917914752269053 3.131885467983576
-  position -5.538802171702363 29.776199377772027 -15.407415794632374
+  orientation 0.0025503807152335314 0.8172619669635637 0.5762606813873856 3.1488266021749953
+  position -2.167506504557359 66.83612136702999 -8.916161473898175
   follow "soccer ball"
   followType "None"
 }
 TexturedBackground {
-  luminosity 3
+  luminosity 8
+  skyColor [
+    1 1 1
+  ]
 }
 SoccerBall {
   translation -3.42 0.31 15.78
@@ -20,7 +23,17 @@ Floor {
   name "floor(3)"
   size 19.4 20
   tileSize 1 1
-  appearance ThreadMetalPlate {
+  appearance PBRAppearance {
+    baseColor 1 0.992157 0.815686
+    baseColorMap ImageTexture {
+      url [
+        "textures/wood.jpg"
+      ]
+      repeatS FALSE
+    }
+    textureTransform TextureTransform {
+      rotation 3.14
+    }
   }
 }
 WoodenPallet {
@@ -72,21 +85,19 @@ Floor {
   rotation 0 1 0 48.69469969389957
   name "floor(1)"
   size 50 17.8
-  tileSize 50 17.8
+  tileSize 1 1
   appearance PBRAppearance {
+    baseColor 1 0.992157 0.815686
     baseColorMap ImageTexture {
       url [
-        ""
+        "textures/wood.jpg"
       ]
+      repeatS FALSE
     }
     textureTransform TextureTransform {
       rotation 3.1415
     }
   }
-}
-MyBed {
-  translation -5.44 6.28816e-06 0.619989
-  rotation 1 1.19872e-08 7.07571e-07 -1.5707953071795862
 }
 Pedestrian {
   translation -9.66 1.27 21.88
