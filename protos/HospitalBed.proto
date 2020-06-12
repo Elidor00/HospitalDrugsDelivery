@@ -1,14 +1,13 @@
-#VRML_SIM R2020a utf8
-# license: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
-# license url: https://cyberbotics.com/webots_assets_license
+# license: GNU General Public License v3.0 (getting from https://free3d.com/). See More Information for github repo
+# license url: https://github.com/Elidor00/HospitalDrugsDelivery
 # tags: static
-# Customizable bed with feet and one or 2 pillows.
+# Customizable hospital bed.
 
-PROTO MyBed1 [
+PROTO HospitalBed [
   field SFVec3f    translation        0 0 0
   field SFRotation rotation           0 0.707107 0.707107 3.14159
   field SFVec3f    scale              0.704109 0.704109 0.704109
-  field SFString   name               "MyBed1"
+  field SFString   name               "HospitalBed"
 
   # field SFNode     frameAppearance    PaintedWood { colorOverride 0.11 0.11 0.11 #}                                                      # Defines the appearance of the frame.
   #field SFNode     mattressAppearance PBRAppearance { roughness 1 metalness 0 #}                                                         # Defines the appearance of the mattress.  
