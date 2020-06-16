@@ -3,8 +3,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.13474094477434684 0.8904402730520511 0.43469644342725544 2.6029904418652854
-  position -1.1509140090996117 11.017942729841353 -12.492686304441607
+  orientation -0.03935326693733396 0.8609882096162799 0.5071002102968524 3.0081578405007594
+  position -6.687515726268893 62.92874898844506 -9.798057105692221
   follow "soccer ball"
   followType "None"
 }
@@ -58,6 +58,16 @@ CardboardBox {
   name "cardboard box(2)"
 }
 CardboardBox {
+  translation 24.4006 0.3 11.9845
+  rotation 0 1 0 -0.261795307179586
+  name "cardboard box(3)"
+}
+CardboardBox {
+  translation 23.869 0.3 14.9247
+  rotation 0 1 0 0.523603
+  name "cardboard box(4)"
+}
+CardboardBox {
   translation 20.5059 0.9 21.2887
   rotation 0 1 0 0.261799
   name "cardboard box(1)"
@@ -78,13 +88,13 @@ WoodenPalletStack {
   name "wooden pallet stack(1)"
 }
 FireExtinguisher {
-  translation -8.31 0 24.02
+  translation -8.31 0 29.18
 }
 Floor {
-  translation -3.4 0 14
+  translation -5 0 14
   rotation 0 1 0 48.69469969389957
   name "floor(1)"
-  size 50 17.8
+  size 50 20.8
   tileSize 1 1
   appearance PBRAppearance {
     baseColor 1 0.992157 0.815686
@@ -99,12 +109,168 @@ Floor {
     }
   }
 }
+Clock {
+  translation -7.49 2.5 -2.09
+  rotation 0 1 0 -1.5707953071795862
+}
+HospitalBed {
+  translation -1.03 1.93265e-06 -9.02
+  scale 0.1 0.1 0.1
+}
+HospitalBed {
+  translation -1.03 1.93265e-06 -0.07
+  scale 0.1 0.1 0.1
+  name "HospitalBed(4)"
+}
+HospitalBed {
+  translation -1.03001 1.93266e-06 28.38
+  scale 0.1 0.1 0.1
+  name "HospitalBed(8)"
+}
+HospitalBed {
+  translation -1.03001 1.93266e-06 20.9
+  scale 0.1 0.1 0.1
+  name "HospitalBed(12)"
+}
+HospitalBed {
+  translation 0.98999 1.00526e-06 16.35
+  rotation 0.5773506025225371 -0.5773506025225371 -0.5773496025232256 -2.094395307179586
+  scale 0.1 0.1 0.1
+  name "HospitalBed(14)"
+}
+HospitalBed {
+  translation 7.28999 -1.88716e-06 16.35
+  rotation 0.5773506025225371 -0.5773506025225371 -0.5773496025232256 -2.094395307179586
+  scale 0.1 0.1 0.1
+  name "HospitalBed(16)"
+}
+HospitalBed {
+  translation -1.03001 1.93266e-06 37.1
+  scale 0.1 0.1 0.1
+  name "HospitalBed(11)"
+}
+HospitalBed {
+  translation -13.64 2.55941e-05 37.1
+  scale 0.1 0.1 0.1
+  name "HospitalBed(18)"
+}
+HospitalBed {
+  translation -13.64 2.55941e-05 8.76
+  scale 0.1 0.1 0.1
+  name "HospitalBed(22)"
+}
+HospitalBed {
+  translation -13.64 2.55941e-05 14.24
+  scale 0.1 0.1 0.1
+  name "HospitalBed(24)"
+}
+HospitalBed {
+  translation -13.64 2.55941e-05 18.18
+  scale 0.1 0.1 0.1
+  name "HospitalBed(25)"
+}
+HospitalBed {
+  translation 3.62 -6.79244e-06 -9.02
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(1)"
+}
+HospitalBed {
+  translation 3.62 -1.07184e-05 -5.17
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(2)"
+}
+HospitalBed {
+  translation 3.62 -1.58063e-05 -0.18
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(3)"
+}
+HospitalBed {
+  translation 3.62 -1.97423e-05 3.68
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(5)"
+}
+HospitalBed {
+  translation 3.61997 -4.49373e-05 28.39
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(6)"
+}
+HospitalBed {
+  translation 3.61997 -4.96069e-05 32.97
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(9)"
+}
+HospitalBed {
+  translation -13.68 -1.71844e-05 32.97
+  rotation -6.781012696521093e-09 0.7071062811861719 0.7071072811865696 3.14159
+  scale 0.1 0.1 0.1
+  name "HospitalBed(20)"
+}
+HospitalBed {
+  translation -13.68 2.31064e-05 4.48
+  rotation -6.781012696521093e-09 0.7071062811861719 0.7071072811865696 3.14159
+  scale 0.1 0.1 0.1
+  name "HospitalBed(21)"
+}
+HospitalBed {
+  translation 3.61997 -5.37872e-05 37.07
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(10)"
+}
+HospitalBed {
+  translation -9.36 -2.94323e-05 37.07
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(19)"
+}
+HospitalBed {
+  translation -9.35998 3.858e-06 4.42
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(23)"
+}
+HospitalBed {
+  translation -9.35998 -6.16482e-06 14.25
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(26)"
+}
+HospitalBed {
+  translation 3.61997 -4.17046e-05 25.22
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(7)"
+}
+HospitalBed {
+  translation 3.61997 -3.72588e-05 20.86
+  rotation 1 4.7949e-09 1.88117e-06 -1.5707953071795862
+  scale 0.1 0.1 0.1
+  name "HospitalBed(13)"
+}
+HospitalBed {
+  translation 7.30997 -4.4183e-05 20.86
+  rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
+  scale 0.1 0.1 0.1
+  name "HospitalBed(15)"
+}
+HospitalBed {
+  translation 11.12 -4.6833e-05 20.86
+  rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
+  scale 0.1 0.1 0.1
+  name "HospitalBed(17)"
+}
 Pedestrian {
-  translation -9.66 1.27 21.88
+  translation -9.66 1.27 27.16
   rotation 0 1 0 1.5708
 }
 Panel {
-  translation -7.72 0 -4.05
+  translation -7.12 0 -4.05
   rotation 0 1 0 -1.5707953071795862
   size 1.9 1.5 0.05
   borderHeight 0.1
@@ -115,33 +281,17 @@ Panel {
     }
   }
 }
-Cabinet {
-  translation -8.96 0 2.85
-  rotation 0 1 0 3.14159
-  name "cabinet(2)"
-  rowsHeights [
-    0.35, 0.2, 0.2, 0.4, 0.4
-  ]
-  columnsWidths [
-    1.4, 0.17, 0.17
-  ]
-  primaryAppearance PaintedWood {
-    colorOverride 0.933333 0.933333 0.92549
-  }
-  secondaryAppearance PaintedWood {
-    colorOverride 0.203922 0.396078 0.643137
-  }
-}
 WoodenChair {
-  translation -11.34 0 22.66
+  translation -14.36 0 27.07
   rotation 0 1 0 1.5708
 }
 Desk {
-  translation -10.72 0 22.65
+  translation -13.39 0 26.99
   rotation 0 1 0 -1.5707953071795862
 }
 Cabinet {
-  translation -10.78 0 24.54
+  translation -10.78 0 29.85
+  rotation 0 1 0 3.14159
   name "cabinet(1)"
   columnsWidths [
     1.3, 0.17, 0.17
@@ -152,6 +302,62 @@ Cabinet {
     "Shelf (1, 3, 3, 0)"
     "Shelf (1, 2, 3, 0)"
   ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.768627 0.627451 0
+  }
+}
+Cabinet {
+  translation -10.78 0 2.77
+  rotation 0 1 0 3.14159
+  name "cabinet(4)"
+  columnsWidths [
+    1.3, 0.17, 0.17
+  ]
+  layout [
+    "Shelf (1, 5, 3, 0)"
+    "Shelf (1, 4, 3, 0)"
+    "Shelf (1, 3, 3, 0)"
+    "Shelf (1, 2, 3, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.827451 0.843137 0.811765
+  }
+}
+Cabinet {
+  translation -13.08 0 2.77
+  rotation 0 1 0 3.14159
+  name "cabinet(5)"
+  columnsWidths [
+    1.3, 0.17, 0.17
+  ]
+  layout [
+    "Shelf (1, 5, 3, 0)"
+    "Shelf (1, 4, 3, 0)"
+    "Shelf (1, 3, 3, 0)"
+    "Shelf (1, 2, 3, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.729412 0.741176 0.713725
+  }
+}
+Cabinet {
+  translation -8.57 0 2.76
+  rotation 0 1 0 3.14159
+  name "cabinet(2)"
+  innerThickness 0.03
+  columnsWidths [
+    1.3, 0.17, 0.17
+  ]
+  layout [
+    ""
+    "Shelf (1, 7, 3, 0)"
+    "Shelf (1, 4, 3, 0)"
+    "Shelf (1, 3, 3, 0)"
+    "Shelf (1, 2, 3, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.729412 0.741176 0.713725
+  }
 }
 Cabinet {
   translation 0.48 0 22.55
@@ -170,7 +376,7 @@ Cabinet {
   }
 }
 Cabinet {
-  translation -8 0 21.78
+  translation -7.59 0 27.22
   rotation 0 -0.9999999999999999 0 1.5707953071795862
   name "cabinet(3)"
   rowsHeights [
@@ -191,9 +397,9 @@ Cabinet {
   }
 }
 Wall {
-  translation -3.41 0 39.09
+  translation -5.02 0 39.09
   name "wall(2)"
-  size 17.8 3 0.2
+  size 21 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 5 1.75
@@ -201,9 +407,9 @@ Wall {
   }
 }
 Wall {
-  translation -3.41 0 -10.91
-  name "wall(1)"
-  size 17.8 3 0.2
+  translation -5.02 0 -10.9
+  name "wall(37)"
+  size 21 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 5 1.75
@@ -211,7 +417,7 @@ Wall {
   }
 }
 Wall {
-  translation -12.2186 0 14.12
+  translation -15.4386 0 14.12
   rotation 0 1 0 1.57085
   name "wall(3)"
   size 50 3 0.2
@@ -237,28 +443,6 @@ Wall {
   rotation 0 1 0 1.57085
   name "wall(25)"
   size 14 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -7.89886 0 36.2598
-  rotation 0 -1 0 4.7123353
-  name "wall(4)"
-  size 5.5 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -7.89937 0 29.0398
-  rotation 0 -1 0 4.7123353
-  name "wall(9)"
-  size 5.5 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -299,32 +483,10 @@ Wall {
   }
 }
 Wall {
-  translation -7.90056 0 7.4498
-  rotation 0 -1 0 4.7123353
-  name "wall(16)"
-  size 5 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -7.90021 0 14.7198
-  rotation 0 -1 0 4.7123353
-  name "wall(14)"
-  size 5 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -7.89985 0 21.9898
+  translation -7.41964 0 26.9998
   rotation 0 -1 0 4.7123353
   name "wall(11)"
-  size 5 3 0.2
+  size 6 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -332,7 +494,7 @@ Wall {
   }
 }
 Wall {
-  translation -7.9011 0 -2.2602
+  translation -7.3111 0 -2.26018
   rotation 0 -1 0 4.7123353
   name "wall(23)"
   size 10.5 3 0.2
@@ -346,6 +508,17 @@ Wall {
   translation -2.64055 0 35.4197
   rotation 0 -1 0 4.7123353
   name "wall(6)"
+  size 7 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -7.40055 0 35.4197
+  rotation 0 -1 0 4.7123353
+  name "wall(4)"
   size 7 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
@@ -376,10 +549,10 @@ Wall {
   }
 }
 Wall {
-  translation -10.0088 0 31.6998
-  rotation 0 1 0 5.53072e-05
+  translation -7.3198 0 6.42994
+  rotation 0 -1 0 4.7123353
   name "wall(5)"
-  size 4.4 3 0.2
+  size 7 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -387,21 +560,10 @@ Wall {
   }
 }
 Wall {
-  translation -10.0088 0 24.3998
-  rotation 0 1 0 5.53072e-05
-  name "wall(10)"
-  size 4.4 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -10.0088 0 17.1198
-  rotation 0 1 0 5.53072e-05
-  name "wall(15)"
-  size 4.4 3 0.2
+  translation -7.3193 0 15.5599
+  rotation 0 -1 0 4.7123353
+  name "wall(14)"
+  size 7 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
@@ -431,28 +593,6 @@ Wall {
   }
 }
 Wall {
-  translation -10.0089 0 9.8598
-  rotation 0 1 0 5.53072e-05
-  name "wall(17)"
-  size 4.4 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
-  translation -10.0089 0 2.9498
-  rotation 0 1 0 5.53072e-05
-  name "wall(24)"
-  size 4.4 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
   translation 1.3108 0 22.4193
   rotation 0 1 0 5.53072e-05
   name "wall(8)"
@@ -467,6 +607,50 @@ Wall {
   translation 1.31121 0 29.9893
   rotation 0 1 0 5.53072e-05
   name "wall(7)"
+  size 8.1 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -11.3388 0 29.9894
+  rotation 0 1 0 5.53072e-05
+  name "wall(9)"
+  size 8.1 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -11.3389 0 12.1494
+  rotation 0 1 0 5.53072e-05
+  name "wall(10)"
+  size 8.1 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -11.339 0 2.8994
+  rotation 0 1 0 5.53072e-05
+  name "wall(1)"
+  size 8.1 3 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation -11.3383 0 20.9194
+  rotation 0 1 0 5.53072e-05
+  name "wall(15)"
   size 8.1 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
@@ -584,202 +768,11 @@ Wall {
     }
   }
 }
-Bed {
-  translation -10.8 0 37.46
-  rotation 0 1 0 3.14159
-}
-Bed {
-  translation -10.8 0 30.09
-  rotation 0 1 0 3.14159
-  name "bed(9)"
-}
-Bed {
-  translation -10.8 0 15.51
-  rotation 0 1 0 3.14159
-  name "bed(11)"
-}
-Bed {
-  translation -10.8 0 8.31
-  rotation 0 1 0 3.14159
-  name "bed(13)"
-}
-Bed {
-  translation -10.8 0 12.34
-  rotation 0 1 0 3.14159
-  name "bed(12)"
-}
-Bed {
-  translation -10.8 0 5.21
-  rotation 0 1 0 3.14159
-  name "bed(14)"
-}
-Bed {
-  translation -10.8 0 26.78
-  rotation 0 1 0 3.14159
-  name "bed(10)"
-}
-Bed {
-  translation 3.99 0 37.31
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(3)"
-}
-Bed {
-  translation -1.18 0 37.16
-  rotation 0 1 0 3.14159
-  name "bed(5)"
-}
-Bed {
-  translation -10.81 0 34.33
-  rotation 0 1 0 3.14159
-  name "bed(1)"
-}
-Bed {
-  translation 3.94 0 33.7
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(2)"
-}
-Bed {
-  translation -1.12 0 33.67
-  rotation 0 1 0 3.14159
-  name "bed(4)"
-}
-Bed {
-  translation -1.11998 0 -9.32
-  rotation 0 1 0 3.14159
-  name "bed(15)"
-}
-Bed {
-  translation -1.11998 0 -5.32
-  rotation 0 1 0 3.14159
-  name "bed(17)"
-}
-Bed {
-  translation -1.06998 0 -0.610003
-  rotation 0 1 0 3.14159
-  name "bed(19)"
-}
-Bed {
-  translation -1.11998 0 3.03
-  rotation 0 1 0 3.14159
-  name "bed(24)"
-}
-Bed {
-  translation 3.65 0 28.22
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(7)"
-}
-Bed {
-  translation 3.65 0 24.38
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(8)"
-}
-Bed {
-  translation 3.65 0 21
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(22)"
-}
-Bed {
-  translation 7.22 0 20.76
-  rotation 0 1 0 -1.5708053071795867
-  name "bed(28)"
-}
-Bed {
-  translation 11.73 0 20.76
-  rotation 0 1 0 -1.5708053071795867
-  name "bed(29)"
-}
-Bed {
-  translation 1.23 0 16.69
-  rotation 0 1 0 1.57079
-  name "bed(23)"
-}
-Bed {
-  translation 7.04 0 16.69
-  rotation 0 1 0 1.57079
-  name "bed(30)"
-}
-Bed {
-  translation 11.72 0 16.69
-  rotation 0 1 0 1.57079
-  name "bed(31)"
-}
-Bed {
-  translation 3.65017 0 -9.38
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(16)"
-}
-Bed {
-  translation 3.65017 0 -5.43
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(18)"
-}
-Bed {
-  translation 3.65017 0 -0.64
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(20)"
-}
-Bed {
-  translation 3.65017 0 3.05
-  rotation 0 1 0 -5.307179586466759e-06
-  name "bed(25)"
-}
-Bed {
-  translation 6.76017 0 4.93
-  rotation 0 1 0 1.57079
-  name "bed(26)"
-}
-Bed {
-  translation 9.99017 0 4.93
-  rotation 0 1 0 1.57079
-  name "bed(27)"
-}
-Bed {
-  translation -1.12 0 28.23
-  rotation 0 1 0 3.14159
-  name "bed(6)"
-}
-Bed {
-  translation -1.12 0 21.04
-  rotation 0 1 0 3.14159
-  name "bed(21)"
-}
 Pioneer3dx {
-  translation -10.26 0.0969315 0.22
+  translation -10.26 0.0969315 -0.95
   rotation 0 1 0 3.14159
   controller ""
   extensionSlot [
-    Compass {
-      rotation 0 1 0 1.5708
-    }
-    GPS {
-      children [
-        Shape {
-          appearance PBRAppearance {
-          }
-          geometry Cylinder {
-            height 0.08
-            radius 0.05
-          }
-        }
-      ]
-    }
-  ]
-}
-Pioneer3dx {
-  translation -5.42201 0.0969315 -4.06103
-  rotation -9.59013e-09 -1 7.28428e-08 -0.261795307179586
-  name "Pioneer 3-DX_versioneProva"
-  controller "<extern>"
-  extensionSlot [
-    GPS {
-      translation 0 0 0.15
-      name "gps_back"
-    }
-    Kinect {
-      translation 0 0.15 0
-      width 150
-      height 100
-    }
     Compass {
       rotation 0 1 0 1.5708
     }
