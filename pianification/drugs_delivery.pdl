@@ -15,7 +15,7 @@ PROBLEM DRUG_DELIVERY-problem (DOMAIN DRUGS_DELIVERY)
 	?magazine = Magazine;
 	?room = Room0;
 	?patient = Patient0;
-	?roomA = Room0;
+	?roomA = Room1;
 	?patientZ = Patient2;
 	
 	
