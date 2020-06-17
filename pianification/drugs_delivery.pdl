@@ -3,14 +3,21 @@ PROBLEM DRUG_DELIVERY-problem (DOMAIN DRUGS_DELIVERY)
 
 	start1 <fact> RobotMoveToRoom.robot_move_to_room.At(?magazine) AT [0,0] [1, +INF] [1, +INF];
 	start2 <fact> RobotDeliveryToPatient.robot_delivery.Idle() AT [0, 0] [1, +INF] [1, +INF];
-	start3 <fact> ComponentDeliver.component_deliver.Idle() AT [0,0] [1, +INF] [1, +INF];
+	//start3 <fact> ComponentDeliver.component_deliver.Idle() AT [0,0] [1, +INF] [1, +INF];
 			
 	end1 <goal> MissionTimeline.mission_timeline.Deliver(?room, ?patient) AT [0, +INF] [1,+INF] [1,+INF];
+	end2 <goal> MissionTimeline.mission_timeline.Deliver(?roomA, ?patientY) AT [0, +INF] [1,+INF] [1,+INF];
+	end3 <goal> MissionTimeline.mission_timeline.Deliver(?roomA, ?patientZ) AT [0, +INF] [1,+INF] [1,+INF];
 	
+	//end1 <goal> ComponentDeliver.component_deliver.Deliver(?roomA, ?patient) AT [0,+INF] [1, +INF] [1, +INF];
 	
+	?patientY = Patient1;
 	?magazine = Magazine;
 	?room = Room0;
 	?patient = Patient0;
+	?roomA = Room0;
+	?patientZ = Patient2;
+	
 	
 
 }
