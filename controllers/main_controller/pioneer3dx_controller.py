@@ -117,7 +117,7 @@ class Controller:
 if __name__ == '__main__':
     # controller = Controller()
     filename = "../../pan.txt"
-    parse(filename)
-
+    res = parse(filename)
+    print(res)
     # controller.create_path("Warehouse", "EntryR4")
     # controller.step()
