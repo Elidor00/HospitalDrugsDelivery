@@ -12,9 +12,12 @@ regex = [regex_RobotMoveToZone, regex_RobotDeliveryToPatient, regex_RobotMoveToR
 
 
 def get_match(reg, filename):
-	with open(filename, 'r') as f:
-		matches = re.findall(reg, f.read(), re.MULTILINE)
-		return matches
+	try:
+		with open(filename, 'r') as f:
+			matches = re.findall(reg, f.read(), re.MULTILINE)
+			return matches
+	except IOError:
+		print("File does not exist!")
 
 
 def create_dict_res(res, reg, index):
