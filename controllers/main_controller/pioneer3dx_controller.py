@@ -6,6 +6,7 @@ from controllers.path_following.astar_alg import astar
 from controllers.utils.const import *
 from controllers.utils.coordinate_utils import minus, norm, polar_angle, rotate
 from controllers.utils.init_sensors import init_gps, init_compass, init_motor, init_keyboard
+from controllers.utils.txt_parser import parse
 
 
 class Controller:
@@ -114,7 +115,9 @@ class Controller:
 
 
 if __name__ == '__main__':
-    controller = Controller()
+    # controller = Controller()
+    filename = "../../pan.txt"
+    parse(filename)
 
-    controller.create_path("Warehouse", "EntryR4")
-    controller.step()
+    # controller.create_path("Warehouse", "EntryR4")
+    # controller.step()
