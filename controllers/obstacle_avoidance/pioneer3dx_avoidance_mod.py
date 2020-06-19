@@ -1,7 +1,5 @@
 from controllers.utils.const import *
 
-# Main loop:
-# - perform simulation steps until Webots is stopping the controller
 
 def obstacle_avoid(distance_sensors, leftMotor, rightMotor, state):
 

@@ -1,4 +1,5 @@
 import re
+import logging
 
 from controllers.utils.const import ROBOT_DELIVERY_TO_PATIENT, ROBOT_MOVE_TO_ROOM, ROBOT_MOVE_TO_ZONE
 
@@ -37,5 +38,6 @@ def parse(filename):
 			# print(res[1])  # token value if needed
 
 			create_dict_res(res, r, i)
-			
+
+	logging.info(f"Dictionary resulted from planning file: {dict_result}")
 	return dict_result

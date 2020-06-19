@@ -1,5 +1,8 @@
 from math import pi
 
+import logging
+import sys
+
 from controller import Robot
 from controllers.hospital_map.graph import MAP_POINTS
 from controllers.path_following.astar_alg import astar
@@ -7,6 +10,16 @@ from controllers.utils.const import *
 from controllers.utils.coordinate_utils import minus, norm, polar_angle, rotate
 from controllers.utils.init_sensors import init_gps, init_compass, init_motor, init_keyboard
 from controllers.utils.txt_parser import parse
+
+
+def setup_logger():
+    # log info on test.log in write mode (without appended)
+    logging.basicConfig(filename=LOGGING_FILE,
+                        filemode='w',
+                        level=logging.INFO,
+                        format='%(levelname)s: %(message)s')
+    # and log also in stdout
+    logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
 
 class Controller:
@@ -26,6 +39,8 @@ class Controller:
         self.path = astar(start, end)
         if self.path is None:
             raise Exception(f"Path from {start} to {end} does not exist")
+        else:
+            logging.info(f"Best path from {start} to {end} = {self.path}")
 
     def step(self):
         while self.robot.step(TIME_STEP) != -1:
@@ -71,7 +86,7 @@ class Controller:
         if distance <= DISTANCE_TOLERANCE:
             self.left_motor.setVelocity(0.0)
             self.right_motor.setVelocity(0.0)
-            print("Checkpoint reached")
+            logging.info("Checkpoint reached")
             self.current_checkpoint += 1
         elif distance <= DISTANCE_BRAKE:
             self.left_motor.setVelocity(MIN_SPEED)
@@ -83,11 +98,11 @@ class Controller:
             return
         else:
             if key == ord('P'):  # 80 is the ASCII for 'P'
-                print("GPS " + str(self.gps.getValues()))
+                logging.info(f"GPS {str(self.gps.getValues())}")
             elif key == ord('E'):
                 self.mode = MANUAL
             else:
-                print("Key value not valid")
+                logging.info("Key value not valid")
 
     def manual_control(self):
         self.set_velocity(0.0, 0.0)
@@ -107,7 +122,7 @@ class Controller:
                 elif key == ord('S'):
                     self.set_velocity(-MAX_SPEED, -MAX_SPEED)
                 else:
-                    print("Key value not valid")
+                    logging.info("Key value not valid")
 
     def set_velocity(self, left_speed=MAX_SPEED, right_speed=MAX_SPEED):
         self.left_motor.setVelocity(left_speed)
@@ -115,11 +130,12 @@ class Controller:
 
 
 if __name__ == '__main__':
+
+    setup_logger()
+
     controller = Controller()
 
-    filename = "../../pan.txt"  # file txt must be in main project dir
-    res = parse(filename)
-    print(res)
+    res = parse(PLANNING_FILE)
 
     controller.create_path("Warehouse", "EntryR4")
     controller.step()
