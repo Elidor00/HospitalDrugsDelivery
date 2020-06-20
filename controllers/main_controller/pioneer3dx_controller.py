@@ -34,6 +34,7 @@ class Controller:
         self.mode = AUTOMATIC
         self.path = []
         self.current_checkpoint = 0
+        self.time = 0
 
     def create_path(self, start, end):
         self.path = astar(start, end)
@@ -42,8 +43,17 @@ class Controller:
         else:
             logging.info(f"Best path from {start} to {end} = {self.path}")
 
+    def global_clock(self, counter):
+        counter += 1
+        if counter % (int(1000 / TIME_STEP)) == 0:
+            self.time += 1
+            counter = 0
+        return counter
+
     def step(self):
+        counter = 0
         while self.robot.step(TIME_STEP) != -1:
+            counter = self.global_clock(counter)
             self.check_keyboard()
             if self.mode == AUTOMATIC:
                 if self.current_checkpoint < len(self.path):

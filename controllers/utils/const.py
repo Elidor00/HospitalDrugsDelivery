@@ -41,7 +41,7 @@ AUTOMATIC = 0
 MANUAL = 1
 
 # State variable for Platinum
-ROBOT_MOVE_TO_ZONE = "RobotMoveToZone"
+ROBOT_MOVE_TO_ZONE = "MissionTimeline"
 ROBOT_DELIVERY_TO_PATIENT = "RobotDeliveryToPatient"
 ROBOT_MOVE_TO_ROOM = "RobotMoveToRoom"
 

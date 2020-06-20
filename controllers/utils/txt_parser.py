@@ -5,7 +5,7 @@ from controllers.utils.const import ROBOT_DELIVERY_TO_PATIENT, ROBOT_MOVE_TO_ROO
 
 dict_result = {ROBOT_MOVE_TO_ZONE: {}, ROBOT_DELIVERY_TO_PATIENT: {}, ROBOT_MOVE_TO_ROOM: {}}
 
-regex_RobotMoveToZone = r"RobotMoveToZone \{([^}]*)}"
+regex_RobotMoveToZone = r"MissionTimeline \{([^}]*)}"
 regex_RobotDeliveryToPatient = r"RobotDeliveryToPatient \{([^}]*)}"
 regex_RobotMoveToRoom = r"RobotMoveToRoom \{([^}]*)}"
 regex = [regex_RobotMoveToZone, regex_RobotDeliveryToPatient, regex_RobotMoveToRoom]
