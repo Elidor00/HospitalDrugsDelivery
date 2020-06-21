@@ -41,7 +41,7 @@ AUTOMATIC = 0
 MANUAL = 1
 
 # State variable for Platinum
-ROBOT_MOVE_TO_ZONE = "MissionTimeline"
+ROBOT_MISSION_TIMELINE = "MissionTimeline"
 ROBOT_DELIVERY_TO_PATIENT = "RobotDeliveryToPatient"
 ROBOT_MOVE_TO_ROOM = "RobotMoveToRoom"
 
@@ -49,4 +49,4 @@ ROBOT_MOVE_TO_ROOM = "RobotMoveToRoom"
 LOGGING_FILE = "../../test.log"
 
 # Planning (file txt must be in main project dir)
-PLANNING_FILE = "../../pan.txt"
+PLANNING_FILE = "../../plan.txt"
