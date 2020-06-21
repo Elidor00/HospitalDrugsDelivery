@@ -28,8 +28,8 @@ def get_match(reg, filename):
 
 def create_dict_res(el, reg):
 	dict_result[reg.split(" ")[0]]["Action " + str(el[0][0])] = el[0][1]
-	dict_result[reg.split(" ")[0]]["start" + str(el[0][0])] = [el[0][2], el[0][3]]
-	dict_result[reg.split(" ")[0]]["end" + str(el[0][0])] = [el[0][4], el[0][5]]
+	dict_result[reg.split(" ")[0]]["Start " + str(el[0][0])] = [el[0][2], el[0][3]]
+	dict_result[reg.split(" ")[0]]["End " + str(el[0][0])] = [el[0][4], el[0][5]]
 
 
 def parse(filename):

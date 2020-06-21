@@ -2,6 +2,7 @@ from math import pi
 
 import logging
 import sys
+import time
 
 from controller import Robot
 from controllers.hospital_map.graph import MAP_POINTS
@@ -45,10 +46,17 @@ class Controller:
 
     def global_clock(self, counter):
         counter += 1
-        if counter % (int(1000 / TIME_STEP)) == 0:
+        if counter % (int(15000 / TIME_STEP)) == 0:  # TODO: rivedere i tempi (30000)
             self.time += 1
             counter = 0
+            print("counter " + str(counter))
         return counter
+
+    def step_with_time(self, stop):
+        counter = 0
+        while self.time < stop:
+            self.robot.step(TIME_STEP)
+            counter = self.global_clock(counter)
 
     def step(self):
         counter = 0
@@ -59,6 +67,9 @@ class Controller:
                 if self.current_checkpoint < len(self.path):
                     checkpoint = self.path[self.current_checkpoint]
                     self.move_to(MAP_POINTS[checkpoint])
+                else:
+                    logging.info(f"Drug deliver to {self.path[self.current_checkpoint-1]}")
+                    return
             else:
                 self.manual_control()
 
@@ -147,5 +158,32 @@ if __name__ == '__main__':
 
     res = parse(PLANNING_FILE)
 
-    controller.create_path("Warehouse", "EntryR4")
-    controller.step()
+    # TODO: da quì in poi va tutto in una funzione a parte
+
+    start_index = int(len(res["MissionTimeline"].keys())/3)
+    stop_index = start_index + int(len(res["RobotDeliveryToPatient"].keys())/3)
+    ordered_list = []
+
+    for i in range(start_index, stop_index):
+        action = res["RobotDeliveryToPatient"]["Action " + str(i)]
+        start_time = res["RobotDeliveryToPatient"]["Start " + str(i)]
+        if "MoveTo" in action:
+            new_action = action.replace("MoveTo", "").replace("-", "")
+            ordered_list.append((int(start_time[0]), new_action))
+
+    sorted(ordered_list, key=lambda x: x[0])
+    ordered_list.insert(0, (0, "Warehouse"))
+
+    def run(index):
+        if index == len(ordered_list):
+            return
+        else:
+            time_to_go = ordered_list[index-1][0]
+            if controller.time == time_to_go:
+                controller.create_path(ordered_list[index-1][1], ordered_list[index][1])
+                controller.step()
+                run(index+1)
+            else:
+                controller.step_with_time(time_to_go)
+                run(index)
+    run(1)
