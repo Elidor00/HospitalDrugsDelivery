@@ -1,4 +1,4 @@
-from controllers.utils.const import *
+from controllers.utils.const import MAX_SENSOR_NUMBER, NAME_SENSOR, TIME_STEP, GPS, COMPASS
 
 
 def init_distance_sensors(robot) -> list:

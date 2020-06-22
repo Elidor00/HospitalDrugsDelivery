@@ -2,6 +2,9 @@ from math import sqrt, atan2, cos, sin, radians, degrees
 
 
 # ||v||
+from controllers.utils.const import MAX_SPEED
+
+
 def norm(vector: list) -> float:
     return sqrt(vector[0] * vector[0] + vector[1] * vector[1])
 
@@ -28,3 +31,12 @@ def polar_angle(vector1: list) -> float:
 def rotate(angle: float, vector: list) -> list:
     return [vector[0] * cos(radians(angle)) - vector[1] * sin(radians(angle)),
             vector[0] * sin(radians(angle)) + vector[1] * cos(radians(angle))]
+
+
+# set the speed to the maximum speed reachable by the robot
+def normalize_speed(speed):
+    if speed > MAX_SPEED:
+        speed = MAX_SPEED
+    elif speed < -MAX_SPEED:
+        speed = -MAX_SPEED
+    return speed
