@@ -3,8 +3,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.06607407133784257 0.9181625677826019 0.39065549557084267 3.449720855091401
-  position -17.687418678759038 22.75792995357921 -17.877066976582398
+  orientation 1 0 0 4.71238898038469
+  position -6.42 57.63386716464556 23.69
   follow "soccer ball"
   followType "None"
 }
@@ -15,7 +15,7 @@ TexturedBackground {
   ]
 }
 SoccerBall {
-  translation -9.86 0.31 -3.61
+  translation -6.42 0.31 23.69
 }
 Floor {
   translation 15.4 0 12.9
@@ -668,10 +668,10 @@ Wall {
   }
 }
 Wall {
-  translation 0.520029 0 7.3293
+  translation 1.40003 0 7.32925
   rotation 0 1 0 5.53072e-05
   name "wall(22)"
-  size 6.5 3 0.2
+  size 8.2 3 0.2
   appearance Roughcast {
     textureTransform TextureTransform {
       scale 4.125 1.725
