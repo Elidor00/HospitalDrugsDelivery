@@ -1,20 +1,37 @@
-PROBLEM DRUG_DELIVERY-problem (DOMAIN DRUGS_DELIVERY)
+PROBLEM DRU_DELIVERY_PROBLEM (DOMAIN DRUG_DELIVERY)
 {	
-
-	start1 <fact> RobotMoveToRoom.robot_move_to_room.At(?roomA) AT [0,0] [1, +INF] [1, +INF];
-			
-	end1 <goal> RobotDeliveryToPatient.robot_delivery.Deliver(?roomB, ?patientB) AT [0, +INF] [1,+INF] [1,+INF];
-	end2 <goal> RobotDeliveryToPatient.robot_delivery.Deliver(?roomC, ?patientC) AT [0, +INF] [1,+INF] [1,+INF];
-	end3 <goal> RobotDeliveryToPatient.robot_delivery.Deliver(?roomD, ?patientD) AT [0, +INF] [1,+INF] [1,+INF];
-	end4 <goal> RobotDeliveryToPatient.robot_delivery.Deliver(?roomE, ?patientE) AT [0, +INF] [1,+INF] [1,+INF];
+	f0 <fact> MissionTimeline.mission_timeline.Idle() AT [0,0] [1, +INF] [1, +INF];
+	f1 <fact> RobotMoveToRoom.robot_move_to_room.At(?r0) AT [0,0] [1, +INF] [1, +INF];
+	f2 <fact> RobotDeliveryToPatient.robot_delivery.Idle() AT [0, 0] [1, +INF] [1, +INF];
 	
-	?roomA = Magazine;
-	?roomB = Room0;
-	?patientB = Patient0;
-	?roomC = Room1;
-	?patientC = Patient1;
-	?roomD = Room1;
-	?patientD = Patient0;
-	?roomE = Room0;
-	?patientE = Patient2;
+	// [00:15 - 00:35] --- [00:30 - 00:50]
+	g1 <goal> MissionTimeline.mission_timeline.Deliver(?r1, ?p1) AT [60, 140] [1, +INF] [1, 15];
+	
+	// [00:40 - 00:50] --- [00:55 - 01:05]
+	g2 <goal> MissionTimeline.mission_timeline.Deliver(?r2, ?p2) AT [160, 200] [1, +INF] [1, 15];
+	
+	// [00:30 - 01:30] --- [00:00 - 01:00]
+	g5 <goal> MissionTimeline.mission_timeline.Deliver(?r5, ?p5) AT [120, 360] [1,+INF] [1, 15];
+	
+	// [00:30 - 01:30] --- [00:45 - 01:45]
+	g3 <goal> MissionTimeline.mission_timeline.Deliver(?r3, ?p3) AT [120, 360] [1,+INF] [1, 15];
+	// [01:00 - 02:00] --- [01:15 - 2:00]
+	g4 <goal> MissionTimeline.mission_timeline.Deliver(?r4, ?p4) AT [240, 480] [1,+INF] [1, 15];
+	
+	?r0 = Warehouse;
+		
+	?r1 = Room0;
+	?p1 = Patient0;
+	
+	?r2 = Room0;
+	?p2 = Patient1;
+		
+	?r3 = Room1;
+	?p3 = Patient2;
+	
+	?r4 = Room2; 
+	?p4 = Patient1;
+	
+	?r5 = Room3;
+	?p5 = Patient1;	
 }
