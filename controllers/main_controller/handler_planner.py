@@ -29,7 +29,7 @@ def exec_plan(controller, plan):
                 controller.step_with_time(time_to_go)
                 run(index)
             else:
-                logging.info("We are late but we continue the delivery")
+                logging.info("We are late but we continue the delivery")  # check sull'end invece che sullo start?
                 controller.create_path(ordered_list[index - 1][1], ordered_list[index][1])
                 controller.step()
                 run(index + 1)

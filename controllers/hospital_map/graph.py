@@ -1,7 +1,7 @@
 # coordinate for target points
 MAP_POINTS = {
     "Warehouse": [-10.26, 0.22],
-    "ExitWareHouse": [-10.26, -9.64],
+    "ExitWarehouse": [-10.26, -9.64],
     "Hallway0": [-3.67, -9.64],
 
     "EntryR0": [-3.67, -3.1],
@@ -33,7 +33,7 @@ MAP_POINTS = {
     "MiddleR3": [14.0, 18.37],
     "NearR3B0": [10.29, 18.37],
     "Room3Patient0": [10.29, 20.85],
-    "BetweenR3B1B2": [1.33, 0.8],
+    "BetweenR3B1B2": [6.39, 18.37],
     "Room3Patient1": [6.39, 20.85],
     "Room3Patient2": [6.39, 16.41],
 
@@ -85,8 +85,8 @@ MAP_POINTS = {
 }
 
 EDGES = [
-    ("Warehouse", "ExitWareHouse"),
-    ("ExitWareHouse", "HallwayEntry"),
+    ("Warehouse", "ExitWarehouse"),
+    ("ExitWarehouse", "HallwayEntry"),
 
     ("HallwayEntry", "Hallway0"),
     ("HallwayEntry", "EntryR8"),
@@ -96,7 +96,7 @@ EDGES = [
     ("EntryR0", "MiddleR0"),
     ("MiddleR0", "NearR0B0"),
     ("NearR0B0", "Room0Patient0"),
-    ("NearR0R0", "BetweenR0B1B2"),
+    ("NearR0B0", "BetweenR0B1B2"),
     ("BetweenR0B1B2", "Room0Patient2"),
     ("BetweenR0B1B2", "Room0Patient1"),
 
@@ -104,7 +104,7 @@ EDGES = [
     ("EntryR1", "MiddleR1"),
     ("MiddleR1", "NearR1B0"),
     ("NearR1B0", "Room1Patient0"),
-    ("NearR1R0", "BetweenR1B1B2"),
+    ("NearR1B0", "BetweenR1B1B2"),
     ("BetweenR1B1B2", "Room1Patient2"),
     ("BetweenR1B1B2", "Room1Patient1"),
 
@@ -116,15 +116,15 @@ EDGES = [
     ("EntryR2", "MiddleR2"),
     ("MiddleR2", "Room2Patient0"),
     ("MiddleR2", "Room2Patient1"),
-    ("Room2Patient1", "Room1Patient2"),
-    ("Room1Patient2", "EntryR2D1"),
+    ("Room2Patient1", "Room2Patient2"),
+    ("Room2Patient2", "EntryR2D1"),
 
     ("EntryR2D1", "EntryR3"),
 
     ("EntryR3", "MiddleR3"),
     ("MiddleR3", "NearR3B0"),
     ("NearR3B0", "Room3Patient0"),
-    ("NearR3R0", "BetweenR3B1B2"),
+    ("NearR3B0", "BetweenR3B1B2"),
     ("BetweenR3B1B2", "Room3Patient2"),
     ("BetweenR3B1B2", "Room3Patient1"),
 
@@ -133,7 +133,7 @@ EDGES = [
     ("EntryR4", "MiddleR4"),
     ("MiddleR4", "NearR4B0"),
     ("NearR4B0", "Room4Patient0"),
-    ("NearR4R0", "BetweenR4B1B2"),
+    ("NearR4B0", "BetweenR4B1B2"),
     ("BetweenR4B1B2", "Room4Patient2"),
     ("BetweenR4B1B2", "Room4Patient1"),
 
@@ -141,7 +141,7 @@ EDGES = [
     ("EntryR5", "MiddleR5"),
     ("MiddleR5", "NearR5B0"),
     ("NearR5B0", "Room5Patient0"),
-    ("NearR5R0", "BetweenR5B1B2"),
+    ("NearR5B0", "BetweenR5B1B2"),
     ("BetweenR5B1B2", "Room5Patient2"),
     ("BetweenR5B1B2", "Room5Patient1"),
 
@@ -149,7 +149,7 @@ EDGES = [
     ("EntryR6", "MiddleR6"),
     ("MiddleR6", "NearR6B0"),
     ("NearR6B0", "Room6Patient0"),
-    ("NearR6R0", "BetweenR6B1B2"),
+    ("NearR6B0", "BetweenR6B1B2"),
     ("BetweenR6B1B2", "Room6Patient2"),
     ("BetweenR6B1B2", "Room6Patient1"),
 
@@ -162,7 +162,7 @@ EDGES = [
     ("EntryR7", "MiddleR7"),
     ("MiddleR7", "NearR7B0"),
     ("NearR7B0", "Room7Patient0"),
-    ("NearR7R0", "BetweenR7B1B2"),
+    ("NearR7B0", "BetweenR7B1B2"),
     ("BetweenR7B1B2", "Room7Patient2"),
     ("BetweenR7B1B2", "Room7Patient1"),
 
@@ -171,7 +171,7 @@ EDGES = [
     ("EntryR8", "MiddleR8"),
     ("MiddleR8", "NearR8B0"),
     ("NearR8B0", "Room8Patient0"),
-    ("NearR8R0", "BetweenR8B1B2"),
+    ("NearR8B0", "BetweenR8B1B2"),
     ("BetweenR8B1B2", "Room8Patient2"),
     ("BetweenR8B1B2", "Room8Patient1")
 ]
