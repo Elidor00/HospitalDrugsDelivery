@@ -61,6 +61,7 @@ class Controller:
     def step(self):
         self.current_checkpoint = 0
         counter = 0
+        # TODO add self.mode RETURN TO WAREHOUSE
         while self.robot.step(TIME_STEP) != -1:
             counter = self.global_clock(counter)
             self.check_keyboard()
@@ -69,7 +70,7 @@ class Controller:
                     checkpoint = self.path[self.current_checkpoint]
                     self.move_to(MAP_POINTS[checkpoint])
                 else:
-                    logging.info(f"Drug deliver to {self.path[self.current_checkpoint-1]}")
+                    logging.info(f"Drug deliver to {self.path[self.current_checkpoint-1]} at time {self.time}")
                     return
             else:
                 self.manual_control()
