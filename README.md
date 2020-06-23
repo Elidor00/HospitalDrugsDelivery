@@ -30,6 +30,6 @@ N.B. By default the simulation is started using the file ```plan.txt``` as a pla
 - Launch PLATINUm as a Maven Project on Eclipse IDE
 - Create a domains folder for a problem
 - Create a new ```.ddl``` and ```.pdl``` file or modify an existing one 
-- Run ```main``` class in ```it.istc.pst.platinum.testing.app.deliberative.PlatinumPlannerTester``` specifying the full path of the ```.ddl``` and ```.pdl`` files 
+- Run ```main``` class in ```it.istc.pst.platinum.testing.app.deliberative.PlatinumPlannerTester``` specifying the full path of the ```.ddl``` and ```.pdl``` files 
 - Copy the output file into the folder ```HospitalDrugsDelivery```
 - Follow steps 3 and 4 of the previous section
