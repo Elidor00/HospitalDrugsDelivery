@@ -1,6 +1,9 @@
 # HospitalDrugsDelivery
 
 ## Introduction
+Our project is about the drug delivery inside a hospital ward. 
+
+We imagine a scenario in which a robot equipped with a trolley of unlimited capacity simulated by software, schedules and performs tasks of delivery of medicines to different patients according to their health needs. Our main focus is a time-saving planning of drugs and therapeutics delivery within a hospital department.
 
 
 ## Development Environment
