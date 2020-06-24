@@ -4,7 +4,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 1 0 0 4.71238898038469
-  position -6.42 57.63386716464556 23.69
+  position 6.494702500430282 74.5377770578058 10.832408202396415
   follow "soccer ball"
   followType "None"
 }
@@ -470,17 +470,6 @@ Wall {
   }
 }
 Wall {
-  translation 8.07954 0 7.32958
-  rotation 0 1 0 5.3666e-05
-  name "wall(28)"
-  size 5.5 3 0.2
-  appearance Roughcast {
-    textureTransform TextureTransform {
-      scale 4.125 1.725
-    }
-  }
-}
-Wall {
   translation -7.41964 0 26.9998
   rotation 0 -1 0 4.7123353
   name "wall(11)"
@@ -580,7 +569,7 @@ Wall {
   }
 }
 Wall {
-  translation 12.9712 0 5.39898
+  translation 7.9512 0 5.39924
   rotation 0 1 0 1.57085
   name "wall(29)"
   size 4 3 0.2

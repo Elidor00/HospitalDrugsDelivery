@@ -1,5 +1,7 @@
 import logging
 
+from controllers.utils.const import TIME_ALIGN
+
 
 def exec_plan(controller, plan):
     start_index = int(len(plan["MissionTimeline"].keys()) / 3)
@@ -12,7 +14,8 @@ def exec_plan(controller, plan):
         start_time = plan["RobotDeliveryToPatient"]["Start " + str(i)]
         if "MoveTo" in action:
             new_action = action.replace("MoveTo", "").replace("-", "")
-            ordered_list.append((int(start_time[0]), int(start_time[1]), new_action))
+            # * 15 s for align time of platinum output with seconds
+            ordered_list.append((int(start_time[0])*TIME_ALIGN, int(start_time[1])*TIME_ALIGN, new_action))
 
     sorted(ordered_list, key=lambda x: x[0])
     ordered_list.insert(0, (0, 0, "Warehouse"))
