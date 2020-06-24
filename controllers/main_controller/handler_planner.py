@@ -1,6 +1,13 @@
 import logging
 
 from controllers.utils.const import TIME_ALIGN
+from controllers.utils.controller_utils import goto
+
+
+def check_goto_safe_point(controller, time_to_go):
+    time_to_wait = time_to_go - controller.time
+    if time_to_wait > 90 and controller.current_position != "SafePoint":
+        goto(controller, controller.current_position, "SafePoint")
 
 
 def exec_plan(controller, plan):
@@ -19,36 +26,24 @@ def exec_plan(controller, plan):
 
     sorted(ordered_list, key=lambda x: x[0])
     controller.current_position = "Warehouse"
-    # ordered_list.insert(0, (0, 0, controller.current_position))
 
     def run(index):
         if index == len(ordered_list):
-            controller.create_path(controller.current_position, "Warehouse")
-            controller.step()
-            logging.info("After a hard turn's work, finally some rest")
+            goto(controller, controller.current_position, "Warehouse")
+            logging.info("After an hard turn's work, finally some rest")
             return
         else:
             time_to_go = [ordered_list[index][0], ordered_list[index][1]]
             if time_to_go[0] <= controller.time <= time_to_go[1]:
-                # controller.create_path(ordered_list[index - 1][2], ordered_list[index][2])
-                controller.create_path(controller.current_position, ordered_list[index][2])
-                controller.step()
-                controller.current_position = ordered_list[index][2]
+                goto(controller, controller.current_position, ordered_list[index][2])
                 run(index + 1)
             elif controller.time < time_to_go[0]:
-                time_to_wait = time_to_go[0] - controller.time
-                if time_to_wait > 90 and controller.current_position != "SafePoint":
-                    controller.create_path(controller.current_position, "SafePoint")
-                    controller.step()
-                    controller.current_position = "SafePoint"
-                    # run(index)
+                check_goto_safe_point(controller, time_to_go[0])
                 # waiting start time
-                # TODO  add safe point if time for waiting is too high
                 controller.step_with_time(time_to_go[0])
                 run(index)
             else:
                 logging.info("We are late but we continue the delivery")
-                controller.create_path(ordered_list[index - 1][2], ordered_list[index][2])
-                controller.step()
+                goto(controller, ordered_list[index - 1][2], ordered_list[index][2])
                 run(index + 1)
     run(0)

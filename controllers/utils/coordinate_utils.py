@@ -33,10 +33,5 @@ def rotate(angle: float, vector: list) -> list:
             vector[0] * sin(radians(angle)) + vector[1] * cos(radians(angle))]
 
 
-# set the speed to the maximum speed reachable by the robot
-def normalize_speed(speed):
-    if speed > MAX_SPEED:
-        speed = MAX_SPEED
-    elif speed < -MAX_SPEED:
-        speed = -MAX_SPEED
-    return speed
+
+
