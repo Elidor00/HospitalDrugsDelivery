@@ -18,18 +18,30 @@ def exec_plan(controller, plan):
             ordered_list.append((int(start_time[0])*TIME_ALIGN, int(start_time[1])*TIME_ALIGN, new_action))
 
     sorted(ordered_list, key=lambda x: x[0])
-    ordered_list.insert(0, (0, 0, "Warehouse"))
+    controller.current_position = "Warehouse"
+    # ordered_list.insert(0, (0, 0, controller.current_position))
 
     def run(index):
         if index == len(ordered_list):
+            controller.create_path(controller.current_position, "Warehouse")
+            controller.step()
+            logging.info("After a hard turn's work, finally some rest")
             return
         else:
             time_to_go = [ordered_list[index][0], ordered_list[index][1]]
             if time_to_go[0] <= controller.time <= time_to_go[1]:
-                controller.create_path(ordered_list[index - 1][2], ordered_list[index][2])
+                # controller.create_path(ordered_list[index - 1][2], ordered_list[index][2])
+                controller.create_path(controller.current_position, ordered_list[index][2])
                 controller.step()
+                controller.current_position = ordered_list[index][2]
                 run(index + 1)
             elif controller.time < time_to_go[0]:
+                time_to_wait = time_to_go[0] - controller.time
+                if time_to_wait > 90 and controller.current_position != "SafePoint":
+                    controller.create_path(controller.current_position, "SafePoint")
+                    controller.step()
+                    controller.current_position = "SafePoint"
+                    # run(index)
                 # waiting start time
                 # TODO  add safe point if time for waiting is too high
                 controller.step_with_time(time_to_go[0])
@@ -39,4 +51,4 @@ def exec_plan(controller, plan):
                 controller.create_path(ordered_list[index - 1][2], ordered_list[index][2])
                 controller.step()
                 run(index + 1)
-    run(1)
+    run(0)

@@ -37,6 +37,7 @@ class Controller:
         self.path = []
         self.current_checkpoint = 0
         self.time = 0
+        self.current_position = ""
 
     def create_path(self, start, end):
         self.path = astar(start, end)
