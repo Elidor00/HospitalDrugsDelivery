@@ -1,4 +1,5 @@
-from controllers.utils.const import *
+from controllers.utils.const import MAX_SENSOR_NUMBER, MAX_SENSOR_VALUE, MIN_DISTANCE, WEIGHT_SENSORS, FORWARD, \
+    WHEEL_WEIGHT_THRESHOLD, SPEED_CHANGE_FACTOR, MAX_SPEED, LEFT, RIGHT
 
 
 def obstacle_avoid(distance_sensors, leftMotor, rightMotor, state):

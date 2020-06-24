@@ -37,7 +37,6 @@ MAP_POINTS = {
     "Room3Patient1": [6.39, 20.85],
     "Room3Patient2": [6.39, 16.41],
 
-
     "EntryR4": [-3.67, 23.85],
     "MiddleR4": [1.0, 23.85],
     "NearR4B0": [1.0, 24.41],
@@ -61,8 +60,6 @@ MAP_POINTS = {
     "BetweenR6B1B2": [-11.0, 36.0],
     "Room6Patient2": [-9.23, 36.0],
     "Room6Patient1": [-13.67, 36.0],
-
-    # "Hallway2": [-6.55, 23.85],
 
     "MiddleHallway1": [-6.55, 14.13],
 
@@ -133,9 +130,6 @@ EDGES = [
     ("MiddleR2", "Room2Patient0"),
     ("MiddleR2", "Room2Patient1"),
     ("Room2Patient1", "Room2Patient2"),
-    # ("Room2Patient2", "EntryR2D1"),
-
-    # ("EntryR2D1", "EntryR3"),
 
     ("EntryR3", "MiddleR3"),
     ("MiddleR3", "NearR3B0"),
@@ -143,7 +137,6 @@ EDGES = [
     ("NearR3B0", "BetweenR3B1B2"),
     ("BetweenR3B1B2", "Room3Patient2"),
     ("BetweenR3B1B2", "Room3Patient1"),
-
 
     ("EntryR2", "EntryR4"),
     ("EntryR4", "MiddleR4"),
@@ -169,18 +162,12 @@ EDGES = [
     ("BetweenR6B1B2", "Room6Patient2"),
     ("BetweenR6B1B2", "Room6Patient1"),
 
-    # ("Hallway2", "EntryR4"),
-
-    #("EntryR6", "Hallway2"),
-
     ("MiddleHallway1", "EntryR7"),
     ("MiddleHallway1", "EntryR8"),
     ("MiddleHallway1", "EntryR7"),
     ("MiddleHallway1", "Hallway1"),
 
     ("EntryR6", "EntryR7"),
-
-    # ("Hallway2", "EntryR7"),
 
     ("EntryR7", "MiddleR7"),
     ("MiddleR7", "NearR7B0"),

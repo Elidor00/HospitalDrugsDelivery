@@ -1,4 +1,4 @@
-from controllers.hospital_map.graph import *
+from controllers.hospital_map.graph import MAP_POINTS, EDGES
 from controllers.utils.coordinate_utils import calculate_distance
 
 
