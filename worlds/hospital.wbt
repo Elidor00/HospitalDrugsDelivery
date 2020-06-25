@@ -3,19 +3,15 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 1 0 0 4.71238898038469
-  position 6.494702500430282 74.5377770578058 10.832408202396415
-  follow "soccer ball"
-  followType "None"
+  orientation 1 7.969803537349004e-17 3.387166503373327e-17 5.382388980384686
+  position -4.386026621096759 24.5131519452029 18.68707412983206
+  follow "Pioneer 3-DX"
 }
 TexturedBackground {
   luminosity 8
   skyColor [
     1 1 1
   ]
-}
-SoccerBall {
-  translation -6.42 0.31 23.69
 }
 Floor {
   translation 15.4 0 12.9
