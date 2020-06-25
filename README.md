@@ -5,6 +5,7 @@ Our project regards a robotic drug delivery system for hospitals.
 
 We imagine a scenario in which a robot equipped with a trolley of unlimited capacity simulated by software, schedules and performs tasks of delivery of medicines to different patients according to their health needs. Our main focus is a time-saving planning of drugs and therapeutics delivery within a hospital department.
 
+[Here](https://github.com/Elidor00/HospitalDrugsDelivery/blob/master/report/hospital_drug_delivery_report.pdf) you can find the complete report. 
 
 ## Development Environment
 You need to install:
