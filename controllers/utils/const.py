@@ -26,7 +26,7 @@ WEIGHT_SENSORS = [
 # Const for robot path: turn coefficient and checkpoint distance tolerance
 DISTANCE_BRAKE = 0.8
 DISTANCE_TOLERANCE = 0.2
-TURN_COEFFICIENT = 4.0  # TODO reduce it for fix the warning in webots console
+TURN_COEFFICIENT = 4.0
 
 # Const for motor
 LEFT_WHEEL = "left wheel"

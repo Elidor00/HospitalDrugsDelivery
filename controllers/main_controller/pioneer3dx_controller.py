@@ -63,7 +63,6 @@ class Controller:
     def step(self):
         self.current_checkpoint = 0
         counter = 0
-        # TODO add self.mode RETURN TO WAREHOUSE
         while self.robot.step(TIME_STEP) != -1:
             counter = self.global_clock(counter)
             self.check_keyboard()
@@ -139,7 +138,7 @@ class Controller:
         self.set_velocity(0.0, 0.0)
         self.robot.step(1000)
         while self.robot.step(TIME_STEP) != -1:
-            self.set_velocity(0.0, 0.0)  # TODO: si ferma un po' troppo bruscamente
+            self.set_velocity(0.0, 0.0)
             key = self.keyboard.getKey()
             if key <= 0:
                 continue
