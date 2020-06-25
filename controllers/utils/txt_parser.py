@@ -53,8 +53,7 @@ def parse(filename):
 def pretty(d):
 	res = ""
 	for x in d:
-		if x == "RobotDeliveryToPatient":
-			res += str(x) + '\n'
-			for y in d[x]:
-				res += '\t' + str(y) + ' = ' + str(d[x][y]) + '\n'
+		res += str(x) + '\n'
+		for y in d[x]:
+			res += '\t' + str(y) + ' = ' + str(d[x][y]) + '\n'
 	return res
