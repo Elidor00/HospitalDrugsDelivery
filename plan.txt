@@ -1,0 +1,76 @@
+horizon = 480
+plan {
+	timelines {
+		MissionTimeline {
+			token 0  { Idle [1,480] [1, 480] }
+			token 1  { Deliver-Room5-Patient0 [5,30] [1, 27] }
+			token 2  { Deliver-Room5-Patient1 [8,30] [1, 27] }
+			token 3  { Deliver-Room1-Patient0 [42,56] [1, 16] }
+			token 4  { Deliver-Room3-Patient2 [46,60] [1, 16] }
+		}
+		RobotDeliveryToPatient {
+			token 5  { Idle [3,25] [3, 25] }
+			token 6  { MoveTo-Room5-Patient0 [4,26] [1, 3] }
+			token 7  { Stop-Room5-Patient0 [5,27] [1, 4] }
+			token 8  { Idle [6,28] [1, 23] }
+			token 9  { MoveTo-Room5-Patient1 [7,29] [1, 3] }
+			token 10  { Stop-Room5-Patient1 [8,30] [1, 4] }
+			token 11  { Idle [40,54] [10, 46] }
+			token 12  { MoveTo-Room1-Patient0 [41,55] [1, 3] }
+			token 13  { Stop-Room1-Patient0 [42,56] [1, 4] }
+			token 14  { Idle [44,58] [2, 16] }
+			token 15  { MoveTo-Room3-Patient2 [45,59] [1, 3] }
+			token 16  { Stop-Room3-Patient2 [46,60] [1, 4] }
+		}
+		RobotMoveToRoom {
+			token 17  { At-Warehouse [1,23] [1, 23] }
+			token 18  { GoingTo-Room5 [3,25] [2, 8] }
+			token 19  { At-Room5 [8,30] [5, 27] }
+			token 20  { GoingTo-Room1 [10,38] [2, 8] }
+			token 21  { At-Room1 [42,56] [4, 46] }
+			token 22  { GoingTo-Room3 [44,58] [2, 8] }
+			token 23  { At-Room3 [46,60] [2, 16] }
+		}
+	}
+	relations {
+		RobotDeliveryToPatient 15 during [0,480]  [0,480] RobotMoveToRoom 23
+		RobotMoveToRoom 21 meets RobotMoveToRoom 22
+		RobotMoveToRoom 22 meets RobotMoveToRoom 23
+		RobotMoveToRoom 19 meets RobotMoveToRoom 20
+		RobotMoveToRoom 20 meets RobotMoveToRoom 21
+		RobotMoveToRoom 17 meets RobotMoveToRoom 18
+		RobotMoveToRoom 18 meets RobotMoveToRoom 19
+		RobotDeliveryToPatient 5 meets RobotDeliveryToPatient 6
+		RobotDeliveryToPatient 6 meets RobotDeliveryToPatient 7
+		RobotDeliveryToPatient 6 during [0,480]  [0,480] RobotMoveToRoom 19
+		RobotDeliveryToPatient 7 meets RobotDeliveryToPatient 8
+		RobotDeliveryToPatient 8 meets RobotDeliveryToPatient 9
+		RobotDeliveryToPatient 9 meets RobotDeliveryToPatient 10
+		RobotDeliveryToPatient 9 during [0,480]  [0,480] RobotMoveToRoom 19
+		MissionTimeline 2 contains [0,480]  [0,480] RobotDeliveryToPatient 10
+		MissionTimeline 2 during [0,480]  [0,480] RobotMoveToRoom 19
+		MissionTimeline 4 contains [0,480]  [0,480] RobotDeliveryToPatient 16
+		MissionTimeline 4 during [0,480]  [0,480] RobotMoveToRoom 23
+		MissionTimeline 3 contains [0,480]  [0,480] RobotDeliveryToPatient 13
+		MissionTimeline 3 during [0,480]  [0,480] RobotMoveToRoom 21
+		MissionTimeline 1 contains [0,480]  [0,480] RobotDeliveryToPatient 7
+		MissionTimeline 1 during [0,480]  [0,480] RobotMoveToRoom 19
+		RobotDeliveryToPatient 5 before [0,480] RobotDeliveryToPatient 10
+		RobotDeliveryToPatient 5 before [0,480] RobotDeliveryToPatient 7
+		RobotDeliveryToPatient 7 before [0,480] RobotDeliveryToPatient 10
+		RobotDeliveryToPatient 13 before [0,480] RobotDeliveryToPatient 16
+		RobotMoveToRoom 17 before [0,480] RobotMoveToRoom 21
+		RobotMoveToRoom 17 before [0,480] RobotMoveToRoom 23
+		RobotMoveToRoom 19 before [0,480] RobotMoveToRoom 21
+		RobotMoveToRoom 17 before [0,480] RobotMoveToRoom 19
+		RobotMoveToRoom 19 before [0,480] RobotMoveToRoom 23
+		RobotMoveToRoom 21 before [0,480] RobotMoveToRoom 23
+		RobotDeliveryToPatient 10 meets RobotDeliveryToPatient 11
+		RobotDeliveryToPatient 11 meets RobotDeliveryToPatient 12
+		RobotDeliveryToPatient 12 meets RobotDeliveryToPatient 13
+		RobotDeliveryToPatient 12 during [0,480]  [0,480] RobotMoveToRoom 21
+		RobotDeliveryToPatient 13 meets RobotDeliveryToPatient 14
+		RobotDeliveryToPatient 14 meets RobotDeliveryToPatient 15
+		RobotDeliveryToPatient 15 meets RobotDeliveryToPatient 16
+	}
+}

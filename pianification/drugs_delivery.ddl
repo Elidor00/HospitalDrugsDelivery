@@ -2,7 +2,7 @@ DOMAIN DRUG_DELIVERY
 {	
 	TEMPORAL_MODULE temporal_module = [0, 480], 500; //1 unità = 15 secondi, 1 turno dura fino a 2 ore
 	
-	PAR_TYPE EnumerationParameterType room = {Warehouse, Room0, Room1, Room2, Room3};
+	PAR_TYPE EnumerationParameterType room = {Warehouse, Room0, Room1, Room2, Room4, Room5, Room3, Room6, Room7, Room8};
 	PAR_TYPE EnumerationParameterType patient = {Patient0, Patient1, Patient2};	
 		
 	COMP_TYPE SingletonStateVariable MissionTimelineSV (
