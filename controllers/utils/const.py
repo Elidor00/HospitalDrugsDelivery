@@ -48,7 +48,7 @@ ROBOT_DELIVERY_TO_PATIENT = "RobotDeliveryToPatient"
 ROBOT_MOVE_TO_ROOM = "RobotMoveToRoom"
 
 # Logger
-LOGGING_FILE = "../../test.log"
+LOGGING_FILE = "../../pioneer3dx.log"
 
 # Planning (file txt must be in main project dir)
 PLANNING_FILE = "../../plan.txt"

@@ -16,7 +16,7 @@ from controllers.utils.txt_parser import parse
 
 
 def setup_logger():
-    # log info on test.log in write mode (without appended)
+    # log info on pioneer3dx.log in write mode (without append)
     logging.basicConfig(filename=LOGGING_FILE,
                         filemode='w',
                         level=logging.INFO,

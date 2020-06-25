@@ -22,8 +22,8 @@ def get_match(reg, filename):
 		with open(filename, 'r') as f:
 			matches = re.findall(reg, f.read(), re.MULTILINE)
 			return str(matches[0])
-	except IOError:
-		print("File does not exist!")
+	except IOError as e:
+		logging.error(f"{e}")
 
 
 def create_dict_res(el, reg):
@@ -46,5 +46,15 @@ def parse(filename):
 			element = value[i]
 			create_dict_res(element, r)
 
-	logging.info(f"Dictionary resulted from planning file: {dict_result}")
+	logging.info(f"Dictionary resulted from planning file: \n {pretty(dict_result)}")
 	return dict_result
+
+
+def pretty(d):
+	res = ""
+	for x in d:
+		if x == "RobotDeliveryToPatient":
+			res += str(x) + '\n'
+			for y in d[x]:
+				res += '\t' + str(y) + ' = ' + str(d[x][y]) + '\n'
+	return res
